@@ -1388,3 +1388,1383 @@ INFO: [ view_end ] --START--
 INFO: ShowPageTrace Behavior ::run [ RunTime:0.001345s ]
 INFO: [ view_end ] --END-- [ RunTime:0.001492s ]
 
+[ 2014-03-23T18:08:23+08:00 ] 127.0.0.1 /doc/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002005s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017703s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001162s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001420s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000947s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005211s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001488s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001682s ]
+
+[ 2014-03-23T18:08:26+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001977s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002165s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001419s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.006462s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.003158s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.020781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020948s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001704s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003574s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000958s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008025s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002106s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002259s ]
+
+[ 2014-03-23T21:07:53+08:00 ] 127.0.0.1 /doc/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002621s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032357s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001143s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001124s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.021153s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001650s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.025518s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001429s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001578s ]
+
+[ 2014-03-23T21:08:05+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.008142s ]
+INFO: [ route_check ] --END-- [ RunTime:0.008385s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002424s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.006604s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000561s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018869s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019028s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001154s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001136s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000963s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004949s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001383s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001534s ]
+
+[ 2014-03-23T22:18:33+08:00 ] 127.0.0.1 /doc/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001833s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016914s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001270s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001161s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000958s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001364s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005198s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001441s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001590s ]
+
+[ 2014-03-23T22:18:54+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001946s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002140s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001203s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005653s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000580s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017593s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001121s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001113s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000884s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004768s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001360s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001520s ]
+
+[ 2014-03-23T22:19:58+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001212s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001392s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000993s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001143s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005513s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000575s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 30 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015927s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000870s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000845s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000632s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003757s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001098s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001249s ]
+
+[ 2014-03-23T22:45:05+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001953s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002141s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001390s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005778s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000595s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 38 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 38 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 38 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 38 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017676s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017837s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001151s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001117s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000888s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004781s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001337s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001487s ]
+
+[ 2014-03-23T22:45:06+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002096s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002291s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001391s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005701s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000580s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 38 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 38 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 38 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 34 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 38 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017819s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001118s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001202s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000923s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004914s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001349s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001497s ]
+
+[ 2014-03-23T22:46:53+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001888s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002069s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001331s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005727s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000659s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 44 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 48 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 44 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 48 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 44 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 48 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 44 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 48 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018173s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018336s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001139s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001825s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000956s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005557s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001342s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001491s ]
+
+[ 2014-03-23T22:52:59+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001975s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002162s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001424s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005581s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000540s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017912s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001136s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001122s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000911s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004818s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001384s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001534s ]
+
+[ 2014-03-23T22:55:52+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002036s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002245s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001547s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005827s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000584s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017751s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017929s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001156s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001112s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000918s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004822s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001343s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001490s ]
+
+[ 2014-03-23T22:55:53+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001941s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002123s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001343s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005584s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000621s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019153s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001126s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001120s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000896s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001202s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004783s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001343s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001500s ]
+
+[ 2014-03-23T22:56:12+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001910s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002090s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001203s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001369s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005791s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000576s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018006s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001186s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001102s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000909s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004849s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001354s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001512s ]
+
+[ 2014-03-23T22:56:12+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002425s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002651s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001336s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005747s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000585s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018039s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001137s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001091s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000909s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004788s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001340s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001497s ]
+
+[ 2014-03-23T22:58:44+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002112s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002295s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001356s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.024352s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000693s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+NOTIC: [8] Undefined index: community D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 46 行.
+NOTIC: [8] Undefined index: position D:\wamp\www\doc\Runtime\Cache\b281e7303a51708a2850bfab05f89f50.php 第 50 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018561s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018721s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001181s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001100s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000912s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004833s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001331s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001481s ]
+
+[ 2014-03-23T23:10:20+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002091s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002293s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001416s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005632s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000585s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017998s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018180s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001162s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001141s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000907s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004954s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001398s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001566s ]
+
+[ 2014-03-23T23:11:18+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002211s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002402s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001392s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005796s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000624s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017303s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001125s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001108s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000926s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004838s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001400s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001548s ]
+
+[ 2014-03-23T23:11:36+08:00 ] 127.0.0.1 /doc/index.php/user/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002163s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002345s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001576s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005804s ]
+SQL: INSERT INTO `user` (`username`,`password`,`right`,`truename`) VALUES ('hi','hi',1,'dfafa') [ RunTime:0.138182s ]
+
+[ 2014-03-23T23:11:36+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001254s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001437s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001154s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005622s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000604s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017976s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001150s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001106s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000888s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001179s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004780s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001366s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001513s ]
+
+[ 2014-03-23T23:12:50+08:00 ] 127.0.0.1 /doc/index.php/user/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001246s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001433s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001199s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005529s ]
+SQL: INSERT INTO `user` (`username`,`password`,`right`,`truename`) VALUES ('11111','111',2,'111') [ RunTime:0.105729s ]
+
+[ 2014-03-23T23:12:50+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001234s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001420s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005597s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000587s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015834s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000890s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000843s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000677s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000954s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003792s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001369s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001518s ]
+
+[ 2014-03-23T23:15:08+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001912s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002097s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001571s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005938s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000597s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017295s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017482s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001202s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001126s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000939s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005022s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001436s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001592s ]
+
+[ 2014-03-23T23:16:10+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001905s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002091s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001370s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005903s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.001010s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016909s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017089s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001187s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001161s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000906s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004914s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001370s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001520s ]
+
+[ 2014-03-23T23:17:32+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001983s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002173s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001423s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005667s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000601s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016897s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017079s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001174s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001085s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000901s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004780s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001322s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001470s ]
+
+[ 2014-03-23T23:18:11+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001985s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002224s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001632s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005708s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000567s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017143s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017322s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001157s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001153s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000945s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004970s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001390s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001536s ]
+
+[ 2014-03-23T23:26:49+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001900s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002095s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001374s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.006237s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000630s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017684s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001215s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001107s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001293s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005428s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001365s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001513s ]
+
+[ 2014-03-23T23:26:53+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001920s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002126s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001406s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.007052s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000602s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017852s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018056s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001138s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001139s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000936s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004865s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001603s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001752s ]
+
+[ 2014-03-23T23:29:28+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002061s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002262s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001384s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005888s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000715s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018325s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018522s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001271s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001136s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000921s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005020s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001391s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001541s ]
+
+[ 2014-03-23T23:29:39+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003558s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003737s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002349s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005855s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000760s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019265s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001175s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001176s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000959s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005078s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001375s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001525s ]
+
+[ 2014-03-23T23:31:04+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002088s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002365s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001340s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005843s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000591s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017219s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001120s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001084s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000892s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001705s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005244s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001627s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001781s ]
+
+[ 2014-03-23T23:31:05+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001451s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001627s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001685s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005750s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000637s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.020665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020838s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000931s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001101s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000760s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004460s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001675s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001827s ]
+
+[ 2014-03-23T23:31:50+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002181s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002354s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001367s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.007582s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000555s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017870s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018060s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001270s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001118s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000939s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005147s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001702s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001854s ]
+
+[ 2014-03-23T23:32:17+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001301s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001475s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.006706s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000597s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018161s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018326s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001090s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000864s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000643s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000966s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003995s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001087s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001234s ]
+
+[ 2014-03-23T23:33:33+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002229s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002407s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001370s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005805s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000592s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019025s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001232s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001307s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000962s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005718s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001691s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001844s ]
+
+[ 2014-03-23T23:34:49+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001266s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001443s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001563s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005777s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000590s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015917s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000889s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000878s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000754s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000971s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003921s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001103s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001251s ]
+
+[ 2014-03-23T23:35:42+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002062s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002237s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.006189s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000613s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019830s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020016s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001241s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001562s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000974s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005579s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001729s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001891s ]
+
+[ 2014-03-23T23:36:14+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001941s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002116s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001383s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005840s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000599s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019197s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001196s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001125s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001083s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001598s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005442s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001375s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001523s ]
+
+[ 2014-03-23T23:36:50+08:00 ] 127.0.0.1 /doc/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001898s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.020355s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020546s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001127s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001234s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000940s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005212s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003203s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003367s ]
+
+[ 2014-03-23T23:37:09+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002030s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002213s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001518s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005594s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000560s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017586s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017772s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001393s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001111s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001020s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005570s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001423s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001572s ]
+
+[ 2014-03-23T23:37:27+08:00 ] 127.0.0.1 /doc/index.php/user/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001270s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001449s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001199s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005835s ]
+SQL: INSERT INTO `user` (`username`,`password`,`right`,`truename`) VALUES ('2222','2222',2,'2222') [ RunTime:0.112224s ]
+
+[ 2014-03-23T23:37:27+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001243s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001425s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001156s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.016497s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000605s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016114s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016281s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000896s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000852s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000658s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000963s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003797s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001255s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001403s ]
+
+[ 2014-03-23T23:39:27+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002126s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002319s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001505s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.006560s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000658s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018229s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001468s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001127s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000904s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005247s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001579s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001741s ]
+
+[ 2014-03-23T23:41:34+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001923s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002111s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001354s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.006469s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000593s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019149s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019333s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001134s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001607s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000960s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005819s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001411s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001556s ]
+
+[ 2014-03-23T23:42:08+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001245s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001433s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001168s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005881s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000590s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016301s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000885s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000847s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000658s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000943s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003770s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001098s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001245s ]
+
+[ 2014-03-23T23:44:37+08:00 ] 127.0.0.1 /doc/index.php/user/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001950s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002140s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001415s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005699s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.002135s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017755s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017940s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001395s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001113s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000904s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005050s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001427s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001601s ]
+
+[ 2014-03-23T23:44:51+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001909s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002089s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001406s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.009754s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000559s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026951s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001642s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001205s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001243s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001683s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006293s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001397s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001546s ]
+
+[ 2014-03-23T23:45:46+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001226s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001410s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000996s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001147s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005688s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000598s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018246s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000934s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000880s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000660s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004045s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001217s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001365s ]
+
+[ 2014-03-23T23:46:15+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001970s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002163s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001410s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005901s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000805s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017866s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018052s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001186s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001109s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001105s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005573s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001500s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001653s ]
+
+[ 2014-03-23T23:46:16+08:00 ] 127.0.0.1 /doc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002150s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.020404s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020630s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001163s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002496s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001166s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001486s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006810s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001651s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001893s ]
+
+[ 2014-03-23T23:46:26+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002615s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002796s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001533s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005465s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000753s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016997s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000909s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000897s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000643s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000943s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003829s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001124s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001276s ]
+
+[ 2014-03-23T23:50:48+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002988s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003172s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003593s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.008662s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000652s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021910s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001916s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001262s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001073s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006132s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001353s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001499s ]
+
+[ 2014-03-23T23:52:05+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001981s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002182s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001782s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.006635s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000626s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019926s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020117s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001527s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001313s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001089s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006893s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001593s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001755s ]
+
+[ 2014-03-23T23:52:54+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002187s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002378s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001484s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005768s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000598s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018833s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001144s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001103s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000903s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004812s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001358s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001525s ]
+
+[ 2014-03-23T23:53:17+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001897s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002103s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001400s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005625s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000678s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017917s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001211s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001130s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000913s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004921s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001346s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001493s ]
+
+[ 2014-03-23T23:54:04+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002013s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002210s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002132s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005922s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000955s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017755s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017947s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001214s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001210s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001005s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001774s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005648s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001526s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001674s ]
+
+[ 2014-03-23T23:54:36+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002268s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002470s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002138s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.008711s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.114913s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017657s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001147s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001123s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000892s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004797s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001381s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001529s ]
+
+[ 2014-03-23T23:54:40+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002352s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001361s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005996s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000641s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018522s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001167s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001126s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000917s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004874s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001370s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001518s ]
+
+[ 2014-03-23T23:55:03+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001906s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002098s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001430s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005848s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000894s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018164s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018365s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001205s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001137s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000894s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004888s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001350s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001497s ]
+
+[ 2014-03-23T23:55:12+08:00 ] 127.0.0.1 /doc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001177s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014149s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014335s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001168s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000933s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000659s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000961s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004153s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001119s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001261s ]
+
+[ 2014-03-23T23:55:41+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001970s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002167s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002427s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005868s ]
+SQL: SELECT * FROM `user` ORDER BY id desc  [ RunTime:0.000585s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017882s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018071s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001305s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001124s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000892s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004965s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001519s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001687s ]
+

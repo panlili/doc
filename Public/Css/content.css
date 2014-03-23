@@ -158,6 +158,12 @@
   table { width: auto; border-collapse:collapse; margin-bottom: 0.5em; }
   table.full { width: 100%; }
   table.fixed { table-layout:fixed }
+  .common_table{
+      width: 100%;text-align: center;
+  }
+  .common_table tr:hover{
+      background-color:  #dfd;
+  }
 
   th,td { padding: 0.5em; }
   thead th { background: #444; color: #fff }
