@@ -13,7 +13,7 @@
 class CataAction extends Action{
     //put your code here
      public function index() {
-        $User = D('User');
+        $User = D('Cata');
         $userlist = $User->order("id desc")->select();
         $this->assign("userlist", $userlist);
         $this->display();

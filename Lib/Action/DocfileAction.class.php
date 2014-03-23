@@ -13,7 +13,7 @@
 class DocfileAction extends Action{
     //put your code here
      public function index() {
-        $User = D('User');
+        $User = D('Docfile');
         $userlist = $User->order("id desc")->select();
         $this->assign("userlist", $userlist);
         $this->display();

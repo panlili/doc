@@ -123,6 +123,7 @@
   #topnav a:hover,
   #topnav a:active { text-decoration:underline; background-color: transparent;}
   
+  #footer{text-align: center;}
   #footer a { color: #999; background:transparent; font-weight: bold;}
   #footer a:focus, 
   #footer a:hover,

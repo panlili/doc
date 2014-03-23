@@ -1,17 +1,27 @@
 <?php
 
+class UserAction extends Action {
 
-class UserAction extends Action{
     //put your code here
 //    public function index(){
 //        echo 'fuck';
 //        $userlist=D("User");
 //        dump($userlist);
 //    }
-     public function index() {
+    public function index() {
         $User = D('User');
-        $userlist = $User->order("id desc")->select();
+        import('ORG.Util.Page'); // 导入分页类
+        //$userlist = $User->order("id desc")->select();
+        $count = $User->count();   // 查询满足要求的总记录数 $map表示查询条件
+        $Page = new Page($count,10); // 实例化分页类 传入总记录数
+        $show = $Page->show(); // 分页显示输出
+        // 进行分页数据查询
+        $userlist = $User->order('id desc')->limit($Page->firstRow . ',' . $Page->listRows)->select();
         $this->assign("userlist", $userlist);
+        ; // 赋值数据集
+        $this->assign('page', $show); // 赋值分页输出
+
+
         $this->display();
     }
 
@@ -34,13 +44,15 @@ class UserAction extends Action{
 
     public function delete() {
         $id = $this->_post("id");
+        dump($id);
+        //$id=3;
         $User = D("User");
         if (!isset($id)) {
             //如果不是通过点击连接，而是url传递，则$id为null
             $this->redirect("User/index");
         } else {
             $condition["id"] = $id;
-            $condition["right"] = array("neq", 9);
+            //$condition["right"] = array("neq", 9);
             if ($User->where($condition)->delete()) {
                 $this->ajaxReturn($id, "deleted!", 1);
             } else {
@@ -75,6 +87,7 @@ class UserAction extends Action{
             $this->redirect("Map/index");
         }
     }
+
 }
 
 ?>
