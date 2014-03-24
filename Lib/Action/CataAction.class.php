@@ -16,7 +16,7 @@ class CataAction extends Action{
         $User = D('Cata');
         $userlist = $User->order("id desc")->select();
         $this->assign("userlist", $userlist);
-        $this->display();
+        $this->display();   
     }
 
     public function add() {
