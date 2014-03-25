@@ -10,75 +10,127 @@
  *
  * @author Administrator
  */
-class CataAction extends Action{
+class CataAction extends Action {
+
     //put your code here
-     public function index() {
-        $User = D('Cata');
-        $userlist = $User->order("id desc")->select();
-        $this->assign("userlist", $userlist);
-        $this->display();   
+    public function treeArray($data, $p_id) {
+
+        $tree = array();
+        foreach ($data as $row) {
+            if ($row['parents'] == $p_id) {
+                $tmp = $this->treeArray($data, $row['id']);
+                if ($tmp) {
+                    $row['children'] = $tmp;
+                } else {
+                    $row['leaf'] = true;
+                }
+                $tree[] = $row;
+            }
+        }
+        Return $tree;
+//        return $result;
+    }
+
+    public function index() {
+        $currentCata = session("currentCataId");
+        $msg = session("action_message1");
+        $Cata = D('Cata');
+        if (is_null($currentCata)) {
+            $this->assign("currentCata", "根目录");
+            $this->assign("cataName",  "根目录");
+        } else {
+            $this->assign("currentCata", session("currentCataName") . "<button type=\"button\" onclick=\"goroot()\">回到根目录</button>");
+            $this->assign("cataName",  session("currentCataName"));
+        }
+
+        $catadata = $Cata->order("id desc")->select();
+        //dump($catadata);
+        $tmp = new IndexAction();
+        $catatmp = $tmp->treeArray($catadata,0);
+        $catatmp = json_encode($catatmp);
+        //dump($catatmp);""
+        
+        $this->assign("msg", $msg);
+        $this->assign("catadata", $catatmp);
+        $this->display();
+    }
+
+    public function SetCurrentCata() {
+        $tmp = $this->_param("cata_id");
+        if ($tmp == 0) {
+            session("currentCataId", null);
+            session("currentCataName", null);
+            $this->ajaxReturn("0", "调用成功！", 1);
+        } else {
+            session("currentCataId", $this->_param("cata_id"));
+            session("currentCataName", $this->_param("cata_name"));
+            $str = session("currentCataName") . "<button type=\"button\" onclick=\"goroot()\">回到根目录</button>";
+            $this->ajaxReturn($str, "调用成功！", 1);
+        }
+//        
+//        session("currentCata", $tmp);         
+//        $this->ajaxReturn(0, "调用成功！", 1);
     }
 
     public function add() {
-        $User = D("User");
-        if ($User->create()) {
-            $data = $User->add();
-            if (false !== $data) {
-                session("action_message", "添加用户成功！");
-                $this->redirect("User/index");
+        $Cata = D("Cata");
+        if ($Cata->create()) {
+
+            if (is_null(session("currentCataId"))) {
+                $Cata->parents = 0;
             } else {
-                session("action_message", "数据保存到数据库错误！");
-                $this->redirect("User/index");
+                $Cata->parents = session("currentCataId");
+            }
+            $data = $Cata->add();
+            if (false !== $data) {
+                session("action_message1", "添加目录成功！");
+                $this->redirect("Cata/index");
+            } else {
+                session("action_message1", "数据保存到数据库错误！");
+                $this->redirect("Cata/index");
             }
         } else {
-            session("action_message", $User->getError());
-            $this->redirect("User/index");
+            session("action_message1", $Cata->getError());
+            $this->redirect("Cata/index");
         }
     }
 
     public function delete() {
-        $id = $this->_post("id");
-        $User = D("User");
-        if (!isset($id)) {
-            //如果不是通过点击连接，而是url传递，则$id为null
-            $this->redirect("User/index");
+        if (is_null(session("currentCataId"))) {
+            session("action_message1", "不能删除根目录！");
+            $this->redirect("Cata/index");
         } else {
+            $id = session("currentCataId");
+            $Cata = D("Cata");
+
+
             $condition["id"] = $id;
-            $condition["right"] = array("neq", 9);
-            if ($User->where($condition)->delete()) {
-                $this->ajaxReturn($id, "deleted!", 1);
+
+            if ($Cata->where($condition)->delete()) {
+                session("currentCataId", null);
+                session("action_message1", "目录已经删除，跳转到根目录！");
+                $this->redirect("Cata/index");
             } else {
-                $this->ajaxReturn(0, "something wrong!", 0);
+                session("action_message1", "系统错误！");
+                $this->redirect("Cata/index");
             }
         }
     }
 
     public function edit() {
-        $User = D("User");
-        $truename = $this->_session("truename");
-        $community = $this->_session("community");
-        $current = $User->where(array("truename" => $truename, "community" => $community))->find();
-        $this->assign("user", $current);
-        $this->display();
-    }
-
-    public function update() {
-        $id = $this->_post("id");
-        $User = D("User");
-        if ($newdata = $User->create()) {
-            $newdata["password"] = md5($this->_post("password"));
-            $data = $User->save($newdata);
-            if (false !== $data) {
-                $this->redirect('Login/logout');
-            } else {
-                session("action_message", "更新数据时保存失败！");
-                $this->redirect("Map/index");
-            }
+        if (is_null(session("currentCataId"))) {
+            session("action_message1", "不能编辑根目录！");
+            $this->redirect("Cata/index");
         } else {
-            session("action_message", $User->getError());
-            $this->redirect("Map/index");
+            $id = session("currentCataId");
+            $Cata = D("Cata");
+            $Cata->where('id=' . $id)->setField('name', $_POST["name"]);
+            session("action_message", "更新数据成功！");
+            $this->redirect("Cata/index");
+
         }
     }
+
 }
 
 ?>

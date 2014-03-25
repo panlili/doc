@@ -117,11 +117,8 @@
                     <div class="hlist">
                         <!-- main navigation: horizontal list -->
                         <ul>
-                            <li class="active"><strong>Button 1</strong></li>
-                            <li><a href="#">Button 2</a></li>
-                            <li><a href="#">Button 3</a></li>
-                            <li><a href="#">Button 4</a></li>
-                            <li><a href="#">Button 5</a></li>
+                            <li class="active"><strong>文档管理系统</strong></li>
+                            
                         </ul>
                     </div>
                 </div>

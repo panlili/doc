@@ -4056,3 +4056,451 @@ INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000676s ]
 INFO: ShowRuntime Behavior ::run [ RunTime:0.001085s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.004071s ]
 
+[ 2014-03-24T15:54:37+08:00 ] 127.0.0.1 /doc/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001885s ]
+SQL: SHOW COLUMNS FROM `cata` [ RunTime:0.037814s ]
+SQL: SELECT * FROM `cata` ORDER BY id desc  [ RunTime:0.020854s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.007232s ]
+SQL: SELECT * FROM `docfile` ORDER BY up_date  [ RunTime:0.231287s ]
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\doc\Lib\Action\IndexAction.class.php 第 23 行.
+NOTIC: [8] Undefined index: pid D:\wamp\www\doc\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\doc\Lib\Action\IndexAction.class.php 第 23 行.
+NOTIC: [8] Undefined index: pid D:\wamp\www\doc\Lib\Action\IndexAction.class.php 第 25 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027360s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001588s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001880s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002365s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001370s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007954s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001487s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001634s ]
+
+[ 2014-03-24T15:55:15+08:00 ] 127.0.0.1 /doc/index.php/index/filelist?cata_id=5
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001942s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002128s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001644s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.005777s ]
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `docfile` WHERE ( cata_id=5 )  [ RunTime:0.000670s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014134s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001106s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001063s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000878s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004587s ]
+
+[ 2014-03-24T15:55:17+08:00 ] 127.0.0.1 /doc/index.php/index/filelist?cata_id=4
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001231s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001415s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001182s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.008694s ]
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `docfile` WHERE ( cata_id=4 )  [ RunTime:0.000540s ]
+
+[ 2014-03-24T15:55:28+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001212s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001391s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001213s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005297s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.024174s ]
+SQL: SELECT * FROM `user` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000603s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016176s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016377s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000978s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000888s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000856s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001393s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004553s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001386s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001558s ]
+
+[ 2014-03-24T23:16:34+08:00 ] 127.0.0.1 /doc/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001796s ]
+SQL: SHOW COLUMNS FROM `cata` [ RunTime:0.395810s ]
+SQL: SELECT * FROM `cata` ORDER BY id desc  [ RunTime:0.001174s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.302820s ]
+SQL: SELECT * FROM `docfile` ORDER BY up_date  [ RunTime:0.106887s ]
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\doc\Lib\Action\IndexAction.class.php 第 23 行.
+NOTIC: [8] Undefined index: pid D:\wamp\www\doc\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\doc\Lib\Action\IndexAction.class.php 第 23 行.
+NOTIC: [8] Undefined index: pid D:\wamp\www\doc\Lib\Action\IndexAction.class.php 第 25 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.146735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.147225s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003040s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002632s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002335s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012599s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003364s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003732s ]
+
+[ 2014-03-24T23:16:38+08:00 ] 127.0.0.1 /doc/index.php/index/filelist?cata_id=5
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002175s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002362s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001551s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.007779s ]
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `docfile` WHERE ( cata_id=5 )  [ RunTime:0.000577s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.058396s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058568s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001461s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001496s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000985s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001249s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005587s ]
+
+[ 2014-03-24T23:16:39+08:00 ] 127.0.0.1 /doc/index.php/index/filelist?cata_id=2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001370s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001562s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001149s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.006322s ]
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `docfile` WHERE ( cata_id=2 )  [ RunTime:0.000585s ]
+
+[ 2014-03-24T23:16:40+08:00 ] 127.0.0.1 /doc/index.php/index/filelist?cata_id=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001232s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001415s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.006396s ]
+NOTIC: 建议使用I方法替代_param
+SQL: SELECT * FROM `docfile` WHERE ( cata_id=1 )  [ RunTime:0.000604s ]
+
+[ 2014-03-24T23:16:43+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001245s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001424s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001206s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.033181s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.000650s ]
+SQL: SELECT * FROM `user` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000631s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.042521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042708s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000957s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001346s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000700s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000955s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004408s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001355s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001511s ]
+
+[ 2014-03-24T23:16:48+08:00 ] 127.0.0.1 /doc/index.php/docfile/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001964s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002147s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001353s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.005623s ]
+SQL: SELECT * FROM `docfile` ORDER BY id desc  [ RunTime:0.000836s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 61 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.049967s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050127s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001127s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001099s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000898s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004788s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001369s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001523s ]
+
+[ 2014-03-24T23:16:58+08:00 ] 127.0.0.1 /doc/index.php/user/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001294s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001481s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001297s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005741s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.000564s ]
+SQL: SELECT * FROM `user` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000594s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016740s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000916s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000865s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000716s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000956s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003949s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001308s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001502s ]
+
+[ 2014-03-24T23:17:05+08:00 ] 127.0.0.1 /doc/index.php/docfile/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001243s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001439s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.005446s ]
+SQL: SELECT * FROM `docfile` ORDER BY id desc  [ RunTime:0.000750s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 61 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016541s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000873s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000882s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000783s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004023s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001175s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001325s ]
+
+[ 2014-03-24T23:17:06+08:00 ] 127.0.0.1 /doc/index.php/cata/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001237s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001424s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001172s ]
+SQL: SHOW COLUMNS FROM `cata` [ RunTime:0.005265s ]
+SQL: SELECT * FROM `cata` ORDER BY id desc  [ RunTime:0.000567s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.059064s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059364s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002191s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002598s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001679s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002594s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010501s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003073s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003577s ]
+
+[ 2014-03-24T23:17:07+08:00 ] 127.0.0.1 /doc/index.php/docfile/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001388s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001584s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001453s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.005504s ]
+SQL: SELECT * FROM `docfile` ORDER BY id desc  [ RunTime:0.000615s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 61 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016257s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000850s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000843s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000664s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003884s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001115s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001268s ]
+
+[ 2014-03-24T23:17:08+08:00 ] 127.0.0.1 /doc/index.php/cata/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001459s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001657s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+SQL: SHOW COLUMNS FROM `cata` [ RunTime:0.005020s ]
+SQL: SELECT * FROM `cata` ORDER BY id desc  [ RunTime:0.000720s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017604s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017759s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000903s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000921s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000669s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000957s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003877s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001139s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001284s ]
+
+[ 2014-03-24T23:17:14+08:00 ] 127.0.0.1 /doc/index.php/docfile/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001893s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002070s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001342s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.006110s ]
+SQL: SELECT * FROM `docfile` ORDER BY id desc  [ RunTime:0.000553s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 61 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017940s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018101s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001151s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001246s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000933s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004968s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001346s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001493s ]
+
+[ 2014-03-24T23:17:16+08:00 ] 127.0.0.1 /doc/index.php/cata/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001256s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001438s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+SQL: SHOW COLUMNS FROM `cata` [ RunTime:0.005173s ]
+SQL: SELECT * FROM `cata` ORDER BY id desc  [ RunTime:0.000576s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\b825efe1cf1416cd3cda802fc51bcb07.php 第 61 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017066s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017224s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000894s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000855s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000653s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000949s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003779s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001091s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001237s ]
+
+[ 2014-03-24T23:17:17+08:00 ] 127.0.0.1 /doc/index.php/docfile/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001242s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001426s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+SQL: SHOW COLUMNS FROM `docfile` [ RunTime:0.005174s ]
+SQL: SELECT * FROM `docfile` ORDER BY id desc  [ RunTime:0.000728s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 53 行.
+NOTIC: [8] Undefined index: right D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 55 行.
+NOTIC: [8] Undefined index: truename D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 59 行.
+NOTIC: [8] Undefined index: email D:\wamp\www\doc\Runtime\Cache\30928e089680e95c4aafeecd1260b7c1.php 第 61 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016310s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016455s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000872s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000848s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000644s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000978s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003768s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001088s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001234s ]
+

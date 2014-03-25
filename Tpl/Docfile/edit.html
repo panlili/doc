@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
@@ -20,11 +22,13 @@
             //鼠标单击树节点时把加载文件列表
             function zTreeOnClick(event, treeId, treeNode) {
                 //alert(treeNode.tId + ", " + treeNode.name);
-                $.get("__APP__/index/filelist", {cata_id: treeNode.id},
+                $.get("__APP__/docfile/SetCurrentCata", {cata_id: treeNode.id, cata_name: treeNode.name},
                 function(json) {
                     //alert("Data Loaded: " +json.data);
-                    $("#col3_content").empty();
-                    $("#col3_content").append("<b>" + json.data + "</b>");
+                    //$("#col3_content").empty();
+                    //$("#col3_content").append("<b>" + json.data + ","+treeNode.name+"</b>");
+                    $("#tip_cata").empty();
+                    $("#tip_cata").append("<strong>当前所在目录:<strong>" + " " + json.data);
                 });
             }
             var setting = {
@@ -32,59 +36,16 @@
                     onClick: zTreeOnClick
                 }
             };
+            function goroot() {
+                $.get("__APP__/docfile/SetCurrentCata", {cata_id: 0},
+                function(json) {
+                    //alert(json.data);
+                    location.reload();
+                });
+            }
 
 
 
-            //var setting = {};
-
-
-            /** var zNodes = [
-             {name: "父节点1 - 展开", open: true,
-             children: [
-             {name: "父节点11 - 折叠",
-             children: [
-             {name: "叶子节点111",
-             children: [{name:"子节点"}]},
-             {name: "叶子节点112"},
-             {name: "叶子节点113"},
-             {name: "叶子节点114"}
-             ]},
-             {name: "父节点12 - 折叠",
-             children: [
-             {name: "叶子节点121"},
-             {name: "叶子节点122"},
-             {name: "叶子节点123"},
-             {name: "叶子节点124"}
-             ]},
-             {name: "父节点13 - 没有子节点", isParent: true}
-             ]},
-             {name: "父节点2 - 折叠",
-             children: [
-             {name: "父节点21 - 展开", open: true,
-             children: [
-             {name: "叶子节点211"},
-             {name: "叶子节点212"},
-             {name: "叶子节点213"},
-             {name: "叶子节点214"}
-             ]},
-             {name: "父节点22 - 折叠",
-             children: [
-             {name: "叶子节点221"},
-             {name: "叶子节点222"},
-             {name: "叶子节点223"},
-             {name: "叶子节点224"}
-             ]},
-             {name: "父节点23 - 折叠",
-             children: [
-             {name: "叶子节点231"},
-             {name: "叶子节点232"},
-             {name: "叶子节点233"},
-             {name: "叶子节点234"}
-             ]}
-             ]},
-             {name: "父节点3 - 没有子节点", isParent: true}
-             
-             ];**/
 
             var zNodes = {$catadata};
 
@@ -108,7 +69,7 @@
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
                         <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
-                        <!-- end: skip link navigation --><a href="__APP__/user/index">用户登录</a> | <a href="#">使用帮助</a> | <a href="#">学院网站</a>
+                        <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="#">文件管理</a> | <a href="__APP__/Cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
                     </div>
                 </div>
                 <div id="nav">
@@ -117,32 +78,32 @@
                     <div class="hlist">
                         <!-- main navigation: horizontal list -->
                         <ul>
-                            <li class="active"><strong>文档管理系统</strong></li>
-                            
+                            <li class="active"><strong>编辑文档内容描述</strong></li>                         
+
                         </ul>
                     </div>
                 </div>
                 <div id="teaser">
                 </div>
                 <div id="main">
-                    <div id="col1">
-                        <div id="col1_content" class="clearfix">
-                            <!-- add your content here -->
 
-                            <ul id="treeDemo" class="ztree"></ul>
-
-                        </div>
-                    </div>
                     <div id="col3">
+
                         <div id="col3_content" class="clearfix">
                             <!-- add your content here -->
-                            <table class="common_table">
-                                <thead><th>序号</th><th>文件名</th><th>上传人</th><th>上传时间</th><th>详细信息</th></thead>
-                                <volist name="filelist" id="vo">
-                                    <tr><td>{$vo.id}</td><td>{$vo.name}</td><td>{$vo.up_user}</td><td>{$vo.up_date}</td><td><a>详细信息</a></td></tr>
-                                </volist>
+                            <form name="edituser" method="POST" action="__URL__/update">
+                                <p style="color: red">{$msg}</p>
+                                <table align="center">
+                                    <volist name="docfile" id="vo">
+                                        <tr><td>文件名:</td><td><input type="text" name="name" size="50"  value="{$vo.name}"/></td></tr>
+                                        <tr><td>选择文件:</td><td><input type="hidden" name="id" value="{$vo.id}" /></td></tr>                                              
 
-                            </table>
+                                        <tr><td>文件描述：</td><td><textarea rows="10" cols="45" name="content">{$vo.content}</textarea></td></tr>
+                                    </volist>
+                                    <tr><td></td><td><input type="submit" value="完成编辑" /></td></tr>
+                                </table>
+
+                            </form>   
                         </div>
                         <!-- IE Column Clearing -->
                         <div id="ie_clearing"> &#160; </div>

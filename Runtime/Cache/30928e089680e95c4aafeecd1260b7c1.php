@@ -13,12 +13,43 @@
         <link rel="stylesheet" href="__PUBLIC__/css/ztree/zTreeStyle/zTreeStyle.css" type="text/css" />
         <script type="text/javascript" src="__PUBLIC__/js/ztree/jquery-1.4.4.min.js"></script>
         <script type="text/javascript" src="__PUBLIC__/js/ztree/jquery.ztree.core-3.5.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
         <!--  <script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
           <script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
+        <SCRIPT type="text/javascript">
+            <!--
+            //鼠标单击树节点时把加载文件列表
+            function zTreeOnClick(event, treeId, treeNode) {
+                //alert(treeNode.tId + ", " + treeNode.name);
+                $.get("__APP__/docfile/filelist", {cata_id: treeNode.id},
+                function(json) {
+                    //alert("Data Loaded: " +json.data);
+                    $("#col3_content").empty();
+                    $("#col3_content").append("<b>" + json.data + "</b>");
+                });
+            }
+            var setting = {
+                callback: {
+                    onClick: zTreeOnClick
+                }
+            };
 
+
+
+
+
+            var zNodes = <?php echo ($catadata); ?>;
+
+            $(document).ready(function() {
+                $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+            });
+            //-->
+        </SCRIPT>
     </head>
     <body>
         <div class="page_margins">
+            <!-- start: skip link navigation -->
+            <!-- end: skip link navigation -->
             <div id="border-top">
                 <div id="edge-tl"></div>
                 <div id="edge-tr"></div>
@@ -29,7 +60,7 @@
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
                         <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
-                        <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
+                        <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="#">文件管理</a> | <a href="__APP__/Cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
                     </div>
                 </div>
                 <div id="nav">
@@ -38,7 +69,8 @@
                     <div class="hlist">
                         <!-- main navigation: horizontal list -->
                         <ul>
-                            <li class="active"><strong>系统用户列表</strong></li>
+                            <li class="active"><strong>文档管理</strong></li>
+                            <li><a href="__APP__/docfile/adddoc">添加文档</a></li>
 
                         </ul>
                     </div>
@@ -46,59 +78,39 @@
                 <div id="teaser">
                 </div>
                 <div id="main">
-                    <table class="common_table" align="center" ><thead><th>序号</th><th>用户名</th><th>用户权限</th><th>姓名</th><th>邮件地址</th>
-                            <th>删除用户</th></thead>
-                        <?php if(is_array($userlist)): $i = 0; $__LIST__ = $userlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$each): $mod = ($i % 2 );++$i;?><tr id="<?php echo ($each["id"]); ?>">
-                                <td><?php echo ($each["id"]); ?></td>
-                                <td><?php echo ($each["username"]); ?></td>
-                                <td>
-                                    <?php switch($each["right"]): case "0": ?>超级管理员<?php break;?>
-                                        <?php case "1": ?>管理员<?php break;?>
-                                        <?php case "2": ?>普通用户<?php break; endswitch;?>
-                                </td>
-                                <td><?php echo ($each["truename"]); ?></td>
+                    <div id="col1">
+                        <div id="col1_content" class="clearfix">
+                            <!-- add your content here -->
 
-                                <td><?php echo ($each["email"]); ?></td>
-                                <td><a href="javascript:delete_user(<?php echo ($each["id"]); ?>)"><img src="__IMAGE__/delete.png" /></a></td>
-                            </tr><?php endforeach; endif; else: echo "" ;endif; ?> 
-                    </table>  
-                    <div id="nav">
-                        <!-- skiplink anchor: navigation -->
-                        <a id="navigation" name="navigation"></a>
-                        <div class="hlist">
-                            <!-- main navigation: horizontal list -->
-                            <ul>
-                                <li class="active"><strong>添加系统用户</strong></li>
+                            <ul id="treeDemo" class="ztree"></ul>
 
-                            </ul>
                         </div>
                     </div>
-                    <form name="adduser" method="POST" action="__URL__/add">
+                    <div id="col3">
+                        <div id="col3_content" class="clearfix">
+                            <!-- add your content here -->
+                            <table class="common_table">
+                                <thead><th>序号</th><th>文件名</th><th>上传人</th><th>上传时间</th><th>编辑</th><th>删除</th></thead>
+                                <?php if(is_array($filelist)): $i = 0; $__LIST__ = $filelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr id="<?php echo ($vo["id"]); ?>"><td><?php echo ($vo["id"]); ?></td><td><?php echo ($vo["name"]); ?></td><td><?php echo ($vo["up_user"]); ?></td><td><?php echo ($vo["up_date"]); ?></td>
+                                        <td><a href="__URL__/edit/<?php echo ($vo["id"]); ?>">编辑</a></td>
+                                        <td><a href="javascript:delete_docfile(<?php echo ($vo["id"]); ?>)"><img src="__PUBLIC__/images/delete.png" /></a></td>
+                                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
-                        <table align="center">
-                            <tr><td>用户名*:</td><td><input type="text" name="username" /></td></tr>
-                            <tr><td>密码*:</td><td><input type="password" name="password" /></td></tr>
-                            <tr><td>用户权限:</td><td><select name="right">
-                                        <option value="2">普通用户</option> <option value="1">管理员</option>
-                                    </select></td></tr>
-                            <tr><td>真实姓名*:</td><td><input type="text" name="truename" value="" /></td></tr>
-
-                            <tr><td>邮件地址：</td><td><input type="text" name="position" /></td></tr>
-                            <tr><td></td><td><input type="submit" value="增加用户" /></td></tr>
-                        </table>
-
-                    </form>   
+                            </table>
+                        </div>
+                        <!-- IE Column Clearing -->
+                        <div id="ie_clearing"> &#160; </div>
+                    </div>
                 </div>
                 <!-- begin: #footer -->
-                <div id="footer">电子工程学院版权所有
+                <div id="footer">电子工程学院版权所有</a>
                 </div>
-
             </div>
             <div id="border-bottom">
                 <div id="edge-bl"></div>
                 <div id="edge-br"></div>
             </div>
-        </div>
+        </div><embed></embed>
 
     </body>
 </html>
