@@ -31,6 +31,7 @@
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
                         <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
+                        欢迎您,管理员{$true_name}&nbsp;&nbsp;&nbsp;
                         <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
                     </div>
                 </div>
@@ -48,8 +49,8 @@
                 <div id="teaser">
                 </div>
                 <div id="main">
-                    <table class="common_table" align="center" ><thead><th>序号</th><th>用户名</th><th>用户权限</th><th>姓名</th><th>邮件地址</th>
-                            <th>删除用户</th></thead>
+                    <table class="common_table" align="center" ><thead><th>序号</th><th>用户名</th><th>用户权限</th><th>姓名</th><th>邮件地址</th><th>修改</th>
+                            <th>删除</th></thead>
                         <volist name="userlist" id="each">
                             <tr id="{$each.id}">
                                 <td>{$each.id}</td>
@@ -64,6 +65,7 @@
                                 <td>{$each.truename}</td>
 
                                 <td>{$each.email}</td>
+                                <td><a href="__URL__/edit/{$each.id}">修改</a></td>
                                 <td><a href="javascript:delete_user({$each.id})"><img src="__PUBLIC__/images/delete.png" /></a></td>
                             </tr>
                         </volist>                         
@@ -88,9 +90,9 @@
                             <tr><td>用户权限:</td><td><select name="right">
                                         <option value="2">普通用户</option> <option value="1">管理员</option>
                                     </select></td></tr>
-                            <tr><td>真实姓名*:</td><td><input type="text" name="truename" value="" /></td></tr>
+                            <tr><td>真实姓名:</td><td><input type="text" name="truename" value="" /></td></tr>
 
-                            <tr><td>邮件地址：</td><td><input type="text" name="position" /></td></tr>
+                            <tr><td>邮件地址：</td><td><input type="text" name="email"  /></td></tr>
                             <tr><td></td><td><input type="submit" value="增加用户" /></td></tr>
                         </table>
 

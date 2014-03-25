@@ -32,59 +32,10 @@
                     onClick: zTreeOnClick
                 }
             };
+            function showlogin() {
+                $("#denglu").show();
+            }
 
-
-
-            //var setting = {};
-
-
-            /** var zNodes = [
-             {name: "父节点1 - 展开", open: true,
-             children: [
-             {name: "父节点11 - 折叠",
-             children: [
-             {name: "叶子节点111",
-             children: [{name:"子节点"}]},
-             {name: "叶子节点112"},
-             {name: "叶子节点113"},
-             {name: "叶子节点114"}
-             ]},
-             {name: "父节点12 - 折叠",
-             children: [
-             {name: "叶子节点121"},
-             {name: "叶子节点122"},
-             {name: "叶子节点123"},
-             {name: "叶子节点124"}
-             ]},
-             {name: "父节点13 - 没有子节点", isParent: true}
-             ]},
-             {name: "父节点2 - 折叠",
-             children: [
-             {name: "父节点21 - 展开", open: true,
-             children: [
-             {name: "叶子节点211"},
-             {name: "叶子节点212"},
-             {name: "叶子节点213"},
-             {name: "叶子节点214"}
-             ]},
-             {name: "父节点22 - 折叠",
-             children: [
-             {name: "叶子节点221"},
-             {name: "叶子节点222"},
-             {name: "叶子节点223"},
-             {name: "叶子节点224"}
-             ]},
-             {name: "父节点23 - 折叠",
-             children: [
-             {name: "叶子节点231"},
-             {name: "叶子节点232"},
-             {name: "叶子节点233"},
-             {name: "叶子节点234"}
-             ]}
-             ]},
-             {name: "父节点3 - 没有子节点", isParent: true}
-             
-             ];**/
 
             var zNodes = {$catadata};
 
@@ -108,7 +59,20 @@
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
                         <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
-                        <!-- end: skip link navigation --><a href="__APP__/user/index">用户登录</a> | <a href="#">使用帮助</a> | <a href="#">学院网站</a>
+                        <!-- end: skip link navigation -->
+                        <switch name="user_right">
+                            <case value="0">欢迎您,超级管理员&nbsp;<a href="__APP__/user/index">用户管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/Cata/index">分类目录管理</a></case>
+                            <case value="1">欢迎您,管理员{$true_name}&nbsp;<a href="__APP__/user/index">用户管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/Cata/index">分类目录管理</a></case>
+                            <case value="2">欢迎您,用户{$true_name}&nbsp;</case>
+                            <default /><div id="denglu" style="display: block;">
+                                <form name="checkin" action="__URL__/checkuser" method="POST">
+                                    用户名<input type="text" name="username"></input>
+                                    密码<input type="password" name="password"></input>
+                                    <input type="submit" value="登录"></input>
+                                </form>
+                            </div>
+                        </switch>
+                        &nbsp;&nbsp; | <a href="#">使用帮助</a> | <a href="__URL__/logout">退出登录</a>
                     </div>
                 </div>
                 <div id="nav">
@@ -118,7 +82,7 @@
                         <!-- main navigation: horizontal list -->
                         <ul>
                             <li class="active"><strong>文档管理系统</strong></li>
-                            
+
                         </ul>
                     </div>
                 </div>
@@ -139,7 +103,13 @@
                             <table class="common_table">
                                 <thead><th>序号</th><th>文件名</th><th>上传人</th><th>上传时间</th><th>详细信息</th></thead>
                                 <volist name="filelist" id="vo">
-                                    <tr><td>{$vo.id}</td><td>{$vo.name}</td><td>{$vo.up_user}</td><td>{$vo.up_date}</td><td><a>详细信息</a></td></tr>
+                                    <tr><td>{$vo.id}</td><td>{$vo.name}</td><td>{$vo.up_user}</td><td>{$vo.up_date}</td>
+                                        <switch name="loginOk" >
+                                            <case value="1" ><td><a href="__URL__/item/{$vo.id}" target="_blank">详细信息</a></td></case>
+                                            <case value="0"><td><a title="你没有足够权限查看详情，请登录">详细信息</a></td></case>
+                                            <default /><td><a title="你没有足够权限查看详情，请登录">详细信息</a></td>
+                                        </switch>
+                                        </tr>
                                 </volist>
 
                             </table>

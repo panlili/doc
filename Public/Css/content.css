@@ -129,6 +129,9 @@
   #footer a:hover,
   #footer a:active {color: #4D87C7; background-color: transparent; text-decoration:underline;}
 
+  #denglu{
+      float: left;
+  }
   /**
    * (en) Emphasizing external Hyperlinks via CSS
    * (de) Hervorhebung externer Hyperlinks mit CSS

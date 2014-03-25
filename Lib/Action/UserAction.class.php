@@ -1,6 +1,6 @@
 <?php
 
-class UserAction extends Action {
+class UserAction extends BaseAction {
 
     //put your code here
 //    public function index(){
@@ -20,6 +20,7 @@ class UserAction extends Action {
         $this->assign("userlist", $userlist);
         ; // 赋值数据集
         $this->assign('page', $show); // 赋值分页输出
+        $this->assign("true_name",session("truname"));
 
 
         $this->display();
@@ -63,30 +64,34 @@ class UserAction extends Action {
 
     public function edit() {
         $User = D("User");
-        $truename = $this->_session("truename");
-        $community = $this->_session("community");
-        $current = $User->where(array("truename" => $truename, "community" => $community))->find();
-        $this->assign("user", $current);
+        $id = $this->_param(2);
+        
+        $data=$User->where("id=".$id)->select();
+        $this->assign("userItem",$data);
+        $this->assign("true_name",session("truname"));
         $this->display();
+       
     }
 
     public function update() {
         $id = $this->_post("id");
         $User = D("User");
         if ($newdata = $User->create()) {
-            $newdata["password"] = md5($this->_post("password"));
+            //$newdata["password"] = md5($this->_post("password"));
             $data = $User->save($newdata);
             if (false !== $data) {
-                $this->redirect('Login/logout');
+                $this->redirect('User/index');
             } else {
-                session("action_message", "更新数据时保存失败！");
-                $this->redirect("Map/index");
+                //session("action_message", "更新数据时保存失败！");
+                $this->redirect("User/index");
             }
         } else {
-            session("action_message", $User->getError());
-            $this->redirect("Map/index");
+            //session("action_message", $User->getError());
+            $this->redirect("User/index");
         }
     }
+    
+  
 
 }
 

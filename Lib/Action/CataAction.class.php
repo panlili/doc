@@ -10,7 +10,7 @@
  *
  * @author Administrator
  */
-class CataAction extends Action {
+class CataAction extends BaseAction {
 
     //put your code here
     public function treeArray($data, $p_id) {
@@ -52,6 +52,7 @@ class CataAction extends Action {
         
         $this->assign("msg", $msg);
         $this->assign("catadata", $catatmp);
+        $this->assign("true_name",session("truname"));
         $this->display();
     }
 

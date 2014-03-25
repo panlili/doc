@@ -1,15 +1,132 @@
 
-<div id="content">
-    <form name="adduser" method="POST" action="__URL__/update" onsubmit="return checkpassword();">
-        <table id="adduser">
-            <tr><td>用户名*:</td><td><input type="text" name="username" value="{$user.username}"/></td></tr>
-            <tr><td>新密码*:</td><td><input type="password" name="password" id="pass1"/></td></tr>
-            <tr><td>确认新密码*:</td><td><input type="password" name="repassword" id="pass2"/></td></tr>
-            <tr><td>姓名*:</td><td><input type="text" name="truename" value="{$user.truename}" /></td></tr>
-            <tr><td>职务：</td><td><input type="text" name="position" value="{$user.position}"/></td></tr>
-            <tr><td></td><td><input type="submit" value="确认修改" /></td></tr>
-            <tr><td></td><td>系统将自动注销，请重新登陆!</td></tr>
-            <input type="hidden" name="id" value="{$user.id}" /></td></tr>
-        </table>
-    </form>
-</div>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <title>办公文档管理系统</title>
+        <!-- add your meta tags here -->
+
+        <link href="__PUBLIC__/css/my_layout.css" rel="stylesheet" type="text/css" />
+        <!--[if lte IE 7]>
+        <link href="css/patches/patch_my_layout.css" rel="stylesheet" type="text/css" />
+        <![endif]-->
+
+        <link rel="stylesheet" href="__PUBLIC__/css/ztree/zTreeStyle/zTreeStyle.css" type="text/css" />
+        <script type="text/javascript" src="__PUBLIC__/js/ztree/jquery-1.4.4.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/ztree/jquery.ztree.core-3.5.js"></script>
+        <!--  <script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
+          <script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
+        <SCRIPT type="text/javascript">
+            <!--
+            //鼠标单击树节点时把加载文件列表
+            function zTreeOnClick(event, treeId, treeNode) {
+                //alert(treeNode.tId + ", " + treeNode.name);
+                $.get("__APP__/docfile/SetCurrentCata", {cata_id: treeNode.id, cata_name: treeNode.name},
+                function(json) {
+                    //alert("Data Loaded: " +json.data);
+                    //$("#col3_content").empty();
+                    //$("#col3_content").append("<b>" + json.data + ","+treeNode.name+"</b>");
+                    $("#tip_cata").empty();
+                    $("#tip_cata").append("<strong>当前所在目录:<strong>" + " " + json.data);
+                });
+            }
+            var setting = {
+                callback: {
+                    onClick: zTreeOnClick
+                }
+            };
+            function goroot() {
+                $.get("__APP__/docfile/SetCurrentCata", {cata_id: 0},
+                function(json) {
+                    //alert(json.data);
+                    location.reload();
+                });
+            }
+
+
+
+
+            var zNodes = {$catadata};
+
+            $(document).ready(function() {
+                $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+            });
+            //-->
+        </SCRIPT>
+    </head>
+    <body>
+        <div class="page_margins">
+            <!-- start: skip link navigation -->
+            <!-- end: skip link navigation -->
+            <div id="border-top">
+                <div id="edge-tl"></div>
+                <div id="edge-tr"></div>
+            </div>
+            <div class="page">
+                <div id="header">
+                    <div id="topnav">
+                        <!-- start: skip link navigation -->
+                        <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
+                        <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
+                        欢迎您,管理员{$true_name}&nbsp;&nbsp;&nbsp;
+                        <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="#">文件管理</a> | <a href="__APP__/Cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
+                    </div>
+                </div>
+                <div id="nav">
+                    <!-- skiplink anchor: navigation -->
+                    <a id="navigation" name="navigation"></a>
+                    <div class="hlist">
+                        <!-- main navigation: horizontal list -->
+                        <ul>
+                            <li class="active"><strong>编辑文档内容描述</strong></li>                         
+
+                        </ul>
+                    </div>
+                </div>
+                <div id="teaser">
+                </div>
+                <div id="main">
+
+                    <div id="col3">
+
+                        <div id="col3_content" class="clearfix">
+                            <!-- add your content here -->
+                            <form name="edituser" method="POST" action="__URL__/update">                                
+                                <table align="center">
+                                    <volist name="userItem" id="vo">
+                                        <tr><td>用户名*:</td><td>{$vo.username}</td></tr>
+                                        <tr><td>密码*:</td><td><input type="password" name="password" value="{$vo.password}"/></td></tr>
+                                        <tr><td>用户权限:</td><td><select name="right">
+                                                    <option value="{$vo.right}" selected="selected"><if condition="$vo.right neq '1'">管理员
+                                                            <else /> 普通用户
+                                                        </if></option>
+                                                    <option value="{$vo.right}">--修改请选择其他--</option>
+                                                    <option value="2">普通用户</option> <option value="1">管理员</option>
+                                                </select></td></tr>
+                                        <tr><td>真实姓名*:</td><td><input type="text" name="truename" value="{$vo.truename}" /></td></tr>
+                                        <input type="hidden" name="id" value="{$vo.id}" />
+                                        <tr><td>邮件地址：</td><td><input type="text" name="email" value="{$vo.email}" /></td></tr>
+
+                                    </volist>
+                                    <tr><td></td><td><input type="submit" value="完成编辑" /></td></tr>
+                                </table>
+
+                            </form>   
+                        </div>
+                        <!-- IE Column Clearing -->
+                        <div id="ie_clearing"> &#160; </div>
+                    </div>
+                </div>
+                <!-- begin: #footer -->
+                <div id="footer">电子工程学院版权所有</a>
+                </div>
+            </div>
+            <div id="border-bottom">
+                <div id="edge-bl"></div>
+                <div id="edge-br"></div>
+            </div>
+        </div><embed></embed>
+
+    </body>
+</html>

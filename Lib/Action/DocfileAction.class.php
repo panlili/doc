@@ -10,7 +10,7 @@
  *
  * @author Administrator
  */
-class DocfileAction extends Action {
+class DocfileAction extends BaseAction {
 
     //put your code here
     /**
@@ -46,6 +46,7 @@ class DocfileAction extends Action {
         //dump($catatmp);
         $this->assign("filelist", $filelist);
         $this->assign("catadata", $catatmp);
+        $this->assign("true_name",session("truname"));
         $this->display();
     }
 
@@ -87,6 +88,7 @@ class DocfileAction extends Action {
         $this->assign("msg", $msg);
         $this->assign("filelist", $filelist);
         $this->assign("catadata", $catatmp);
+        $this->assign("true_name",session("truname"));
         $this->display();
     }
 
@@ -167,6 +169,7 @@ class DocfileAction extends Action {
         $Docfile=D("Docfile");
         $data=$Docfile->where("id=".$id)->select();
         $this->assign("docfile",$data);
+        $this->assign("true_name",session("truname"));
         $this->display();
     }
 
