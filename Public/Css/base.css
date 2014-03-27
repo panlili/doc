@@ -63,7 +63,10 @@
     text-align: left; /* LTR */
     height: 100%;
   }
-
+  button{
+      padding: 2px;
+  }
+  input{padding: 2px;}
   /* (en) Clear borders for <fieldset> and <img> elements */
   /* (de) Rahmen für <fieldset> und <img> Elemente löschen */
   fieldset, img { border: 0 solid; }

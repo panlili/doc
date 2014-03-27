@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
@@ -20,11 +22,13 @@
             //鼠标单击树节点时把加载文件列表
             function zTreeOnClick(event, treeId, treeNode) {
                 //alert(treeNode.tId + ", " + treeNode.name);
-                $.get("__APP__/index/filelist", {cata_id: treeNode.id},
+                $.get("__APP__/docfile/SetCurrentCata", {cata_id: treeNode.id, cata_name: treeNode.name},
                 function(json) {
                     //alert("Data Loaded: " +json.data);
-                    $("#col3_content").empty();
-                    $("#col3_content").append("<b>" + json.data + "</b>");
+                    //$("#col3_content").empty();
+                    //$("#col3_content").append("<b>" + json.data + ","+treeNode.name+"</b>");
+                    $("#tip_cata").empty();
+                    $("#tip_cata").append("<strong>当前所在目录:<strong>" + " " + json.data);
                 });
             }
             var setting = {
@@ -32,9 +36,15 @@
                     onClick: zTreeOnClick
                 }
             };
-            function showlogin() {
-                $("#denglu").show();
+            function goroot() {
+                $.get("__APP__/docfile/SetCurrentCata", {cata_id: 0},
+                function(json) {
+                    //alert(json.data);
+                    location.reload();
+                });
             }
+
+
 
 
             var zNodes = {$catadata};
@@ -59,6 +69,7 @@
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
                         <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
+                        欢迎您,管理员{$true_name}&nbsp;&nbsp;&nbsp;
                         <!-- end: skip link navigation -->
                         <switch name="user_right">
                             <case value="0">欢迎您,超级管理员&nbsp;<a href="__APP__/user/index">用户管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/Cata/index">分类目录管理</a></case>
@@ -72,7 +83,7 @@
                                 </form>
                             </div>
                         </switch>
-                        &nbsp;&nbsp; | <a href="#">使用帮助</a> | <a href="__URL__/logout">退出登录</a>
+                        &nbsp;&nbsp; | <a href="#">使用帮助</a> | <a href="__APP__/index/index">系统首页</a>
                     </div>
                 </div>
                 <div id="nav">
@@ -81,46 +92,43 @@
                     <div class="hlist">
                         <!-- main navigation: horizontal list -->
                         <ul>
-                            <li class="active"><strong>文档管理系统</strong></li>
+                            <li class="active"><strong>搜索结果列表</strong></li> 
+                            <li ><a href="__APP__/index/index">返回首页</a></li>
 
                         </ul>
-                      
-                </div>
-                     
                     </div>
+                </div>
                 <div id="teaser">
                 </div>
                 <div id="main">
-                    <div id="col1">
-                         <div style="padding-left: 20px;display: block;">
-                            <form name="search" action="__URL__/search" method="POST">
-                                <input type="text" name="search_key" size="30" />
-                                <input type="submit" value="检索"></input>
-                            </form></div>
-                        <div id="col1_content" class="clearfix">
-                            <!-- add your content here -->
 
-                            <ul id="treeDemo" class="ztree"></ul>
+                    <div >
 
-                        </div>
-                    </div>
-                    <div id="col3">
                         <div id="col3_content" class="clearfix">
                             <!-- add your content here -->
-                            <table class="common_table">
+                           
+
+                            <table align="center" class="common_table">
                                 <thead><th>序号</th><th>文件名</th><th>上传人</th><th>上传时间</th><th>详细信息</th></thead>
-                                <volist name="filelist" id="vo">
+                                <volist name="doc_list" id="vo">
                                     <tr><td>{$vo.id}</td><td>{$vo.name}</td><td>{$vo.up_user}</td><td>{$vo.up_date}</td>
                                         <switch name="loginOk" >
                                             <case value="1" ><td><a href="__URL__/item/{$vo.id}" target="_blank">详细信息</a></td></case>
                                             <case value="0"><td><a title="你没有足够权限查看详情，请登录">详细信息</a></td></case>
                                             <default /><td><a title="你没有足够权限查看详情，请登录">详细信息</a></td>
                                         </switch>
-                                        </tr>
+                                    </tr>
                                 </volist>
 
                             </table>
+
+{$page}
                         </div>
+                         <div style="padding: 20px;display: block;">
+                                <form name="search" action="__URL__/search" method="POST">
+                                    <input type="text" name="search_key" size="30" />
+                                    <input type="submit" value="检索"></input>
+                                </form></div>
                         <!-- IE Column Clearing -->
                         <div id="ie_clearing"> &#160; </div>
                     </div>

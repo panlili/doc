@@ -1,7 +1,13 @@
 <table class="common_table">
     <thead><th>序号</th><th>文件名</th><th>上传人</th><th>上传时间</th><th>详细信息</th></thead>
 <volist name="filelist" id="vo">
-    <tr><td>{$vo.id}</td><td>{$vo.name}</td><td>{$vo.up_user}</td><td>{$vo.up_date}</td><td><a>详细信息</a></td></tr>
+    <tr><td>{$vo.id}</td><td>{$vo.name}</td><td>{$vo.up_user}</td><td>{$vo.up_date}</td>
+    <switch name="loginOk" >
+    <case value="1" ><td><a href="__URL__/item/{$vo.id}" target="_blank">详细信息</a></td></case>
+    <case value="0"><td><a title="你没有足够权限查看详情，请登录">详细信息</a></td></case>
+    <default /><td><a title="你没有足够权限查看详情，请登录">详细信息</a></td>
+    </switch>
+    </tr>
 </volist>
 
 </table>

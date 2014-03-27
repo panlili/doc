@@ -105,13 +105,37 @@ class IndexAction extends Action {
             $this->display();
         }
     }
-    
-     public function logout() {
+
+    public function logout() {
         //清除用户信息缓存
-        
+
         session(null);
         session_destroy();
         $this->redirect("index/index");
+    }
+
+    public function search() {
+        $search_key = $this->_post("search_key");
+        $Docfile = D("Docfile");
+
+        $condition["name"] = array("like", "%" . $search_key . "%");
+        $condition["content"] = array("like", "%" . $search_key . "%");
+        $condition['_logic'] = 'OR';
+
+        $doc_list = $Docfile->where($condition)->select();
+        $this->assign("doc_list", $doc_list);
+
+//        import('ORG.Util.Page'); // 导入分页类
+//        //$count = $Docfile->count();
+//        $mapcount = $Docfile->where($condition)->count(); // 查询满足要求的总记录数
+//        $Page = new Page($mapcount, 2); // 实例化分页类 传入总记录数和每页显示的记录数
+////分页跳转的时候保证查询条件
+//        foreach ($condition as $key => $val) {
+//            $Page->parameter .= "$key=" . urlencode($val) . '&';
+//        }
+//        $show = $Page->show(); // 分页显示输出
+//        $this->assign('page', $show);
+        $this->display();
     }
 
 }
