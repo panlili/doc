@@ -61,6 +61,7 @@ class IndexAction extends Action {
         if (is_null($filelist)) {
             $this->ajaxReturn("你所选择的目录下面没有文件", "调用不成功", 0);
         } else {
+            $this->assign("loginOk", session("loginOk"));
 
             $this->assign("filelist", $filelist);
             $result = $this->fetch("_filelist");
