@@ -104,8 +104,7 @@
                                                 <tr><td>文件名:</td><td><input type="text" name="name" size="50" /></td></tr>
                                                 <tr><td>选择文件:</td><td><input type="file" name="docfile" /></td></tr>  
                                                 <tr><td>文件访问权限:</td>
-                                                    <td><select name="g_id">
-                                                            <option value="1">所有用户可见</option>
+                                                    <td><select name="g_id">                                                            
                                                             <?php if(is_array($group_list)): $i = 0; $__LIST__ = $group_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["g_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                                                         </select></td></tr>
 

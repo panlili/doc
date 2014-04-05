@@ -46,7 +46,7 @@ class DocfileAction extends BaseAction {
         //dump($catatmp);
         $this->assign("filelist", $filelist);
         $this->assign("catadata", $catatmp);
-        $this->assign("true_name", session("truname"));
+        $this->assign("true_name", session("truename"));
         $this->display();
     }
 
@@ -91,7 +91,7 @@ class DocfileAction extends BaseAction {
         $this->assign("msg", $msg);
         $this->assign("filelist", $filelist);
         $this->assign("catadata", $catatmp);
-        $this->assign("true_name", session("truname"));
+        $this->assign("true_name", session("truename"));
         $this->assign("group_list", $group_list);
         $this->display();
     }
@@ -197,7 +197,7 @@ class DocfileAction extends BaseAction {
         $this->assign("currentCata", session("currentCataName"));
         $this->assign("group_list", $group_list);
         $this->assign("docfile", $data);
-        $this->assign("true_name", session("truname"));
+        $this->assign("true_name", session("truename"));
         $this->display();
     }
 

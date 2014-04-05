@@ -20,7 +20,7 @@ class UserAction extends BaseAction {
         $this->assign("userlist", $userlist);
         ; // 赋值数据集
         $this->assign('page', $show); // 赋值分页输出
-        $this->assign("true_name",session("truname"));
+        $this->assign("true_name",session("truename"));
 
 
         $this->display();
@@ -75,7 +75,7 @@ class UserAction extends BaseAction {
         
         $data=$User->where("id=".$id)->select();
         $this->assign("userItem",$data);
-        $this->assign("true_name",session("truname"));
+        $this->assign("true_name",session("truename"));
         $this->display();
        
     }

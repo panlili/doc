@@ -52,7 +52,7 @@ class CataAction extends BaseAction {
         
         $this->assign("msg", $msg);
         $this->assign("catadata", $catatmp);
-        $this->assign("true_name",session("truname"));
+        $this->assign("true_name",session("truename"));
         $this->display();
     }
 

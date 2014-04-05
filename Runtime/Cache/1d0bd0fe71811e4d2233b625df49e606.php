@@ -1,4 +1,4 @@
-
+<?php if (!defined('THINK_PATH')) exit();?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -47,7 +47,7 @@
 
 
 
-            var zNodes = {$catadata};
+            var zNodes = <?php echo ($catadata); ?>;
 
             $(document).ready(function() {
                 $.fn.zTree.init($("#treeDemo"), setting, zNodes);
@@ -69,7 +69,7 @@
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
                         <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
-                        欢迎您,管理员{$true_name}&nbsp;&nbsp;&nbsp;
+                        欢迎您,管理员<?php echo ($true_name); ?>&nbsp;&nbsp;&nbsp;
                         <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
                     </div>
                 </div>
@@ -94,21 +94,17 @@
                             <!-- add your content here -->
                             <form name="edituser" method="POST" action="__URL__/update">                                
                                 <table align="center">
-                                    <volist name="userItem" id="vo">
-                                        <tr><td>用户名*:</td><td>{$vo.username}</td></tr>
-                                        <tr><td>密码*:</td><td><input type="password" name="password" value="{$vo.password}"/></td></tr>
+                                    <?php if(is_array($userItem)): $i = 0; $__LIST__ = $userItem;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr><td>用户名*:</td><td><?php echo ($vo["username"]); ?></td></tr>
+                                        <tr><td>密码*:</td><td><input type="password" name="password" value="<?php echo ($vo["password"]); ?>"/></td></tr>
                                         <tr><td>用户权限:</td><td><select name="right">
-                                                    <option value="{$vo.right}" selected="selected"><if condition="$vo.right neq '1'">普通用户
-                                                            <else /> 管理员
-                                                        </if></option>
-                                                    <option value="{$vo.right}">--修改请选择其他--</option>
+                                                    <option value="<?php echo ($vo["right"]); ?>" selected="selected"><?php if($vo["right"] != '1'): ?>普通用户
+                                                            <?php else: ?> 管理员<?php endif; ?></option>
+                                                    <option value="<?php echo ($vo["right"]); ?>">--修改请选择其他--</option>
                                                     <option value="2">普通用户</option> <option value="1">管理员</option>
                                                 </select></td></tr>
-                                        <tr><td>真实姓名*:</td><td><input type="text" name="truename" value="{$vo.truename}" /></td></tr>
-                                        <input type="hidden" name="id" value="{$vo.id}" />
-                                        <tr><td>邮件地址：</td><td><input type="text" name="email" value="{$vo.email}" /></td></tr>
-
-                                    </volist>
+                                        <tr><td>真实姓名*:</td><td><input type="text" name="truename" value="<?php echo ($vo["truename"]); ?>" /></td></tr>
+                                        <input type="hidden" name="id" value="<?php echo ($vo["id"]); ?>" />
+                                        <tr><td>邮件地址：</td><td><input type="text" name="email" value="<?php echo ($vo["email"]); ?>" /></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
                                     <tr><td></td><td><input type="submit" value="完成编辑" /></td></tr>
                                 </table>
 

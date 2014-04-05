@@ -25,7 +25,7 @@ class GroupAction extends BaseAction {
         $this->assign("grouplist", $grouplist);
         ; // 赋值数据集
         $this->assign('page', $show); // 赋值分页输出     
-        $this->assign("true_name", session("truname"));
+        $this->assign("true_name", session("truename"));
 
 
         $this->display();
@@ -34,6 +34,7 @@ class GroupAction extends BaseAction {
     public function newgroup() {
         $User = D("User");
         $user_list = $User->select();
+        $this->assign("true_name", session("truename"));
         $this->assign("user_list", $user_list);
         $this->display();
     }
@@ -86,6 +87,7 @@ class GroupAction extends BaseAction {
             }
         }
         //dump($user_list);
+        $this->assign("true_name", session("truename"));
 
         $this->assign("user_list", $user_list);
         $this->display();

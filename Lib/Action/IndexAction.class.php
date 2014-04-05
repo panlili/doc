@@ -34,7 +34,7 @@ class IndexAction extends Action {
         } else {
             //登录成功
             $this->assign("loginOk", 1);
-            $this->assign("true_name", session("truname"));
+            $this->assign("true_name", session("truename"));
             $this->assign("user_right", session("right"));
         }
         $Cata = D('Cata');
@@ -132,7 +132,7 @@ class IndexAction extends Action {
             //dump($data);
             if (in_array($data[0]["g_id"], $g_list)) {                
                 $this->assign("docfile", $data);
-                $this->assign("true_name", session("truname"));
+                $this->assign("true_name", session("truename"));
                 $this->assign("user_right", session("right"));
                 $this->display();
             } else {
@@ -158,7 +158,7 @@ class IndexAction extends Action {
         } else {
             //登录成功
             $this->assign("loginOk", 1);
-            $this->assign("true_name", session("truname"));
+            $this->assign("true_name", session("truename"));
             $this->assign("user_right", session("right"));
         }
         $Docfile = D("Docfile");

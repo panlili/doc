@@ -103,8 +103,7 @@
                                                 <?php if(is_array($docfile)): $i = 0; $__LIST__ = $docfile;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr><td>文件名:</td><td><input type="text" name="name" size="50"  value="<?php echo ($vo["name"]); ?>"/></td></tr>
                                                     <tr><td>选择文件:</td><td><input type="hidden" name="id" value="<?php echo ($vo["id"]); ?>" /></td></tr> 
                                                     <tr><td>文件访问权限:</td>
-                                                        <td><select name="g_id">
-                                                                <option value="1" <?php if(($vo["g_id"]) == "1"): ?>selected="selected"<?php endif; ?>>所有用户可见</option>
+                                                        <td><select name="g_id">                                                                
                                                                 <?php if(is_array($group_list)): $i = 0; $__LIST__ = $group_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$each): $mod = ($i % 2 );++$i; if(($each["id"]) == $vo["g_id"]): ?><option value="<?php echo ($each["id"]); ?>" selected="selected"><?php echo ($each["g_name"]); ?></option><?php else: ?><option value="<?php echo ($each["id"]); ?>"><?php echo ($each["g_name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                                                             </select></td></tr>
 
