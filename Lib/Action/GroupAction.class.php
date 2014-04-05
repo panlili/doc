@@ -122,8 +122,8 @@ class GroupAction extends BaseAction {
         //$id=3;
         $Group = D("Group");
         $G_u = D("G_u");
-        if (!isset($id)) {
-            //如果不是通过点击连接，而是url传递，则$id为null
+        if (!isset($id) || $id==1) {
+            //如果不是通过点击连接，而是url传递，则$id为null,id为1的组是特殊组，不可删除
             $this->redirect("group/index");
         } else {
             $condition["id"] = $id;

@@ -1,3 +1,5 @@
+<?php if (!defined('THINK_PATH')) exit();?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
@@ -45,7 +47,7 @@
 
 
 
-            var zNodes = {$catadata};
+            var zNodes = <?php echo ($catadata); ?>;
 
             $(document).ready(function() {
                 $.fn.zTree.init($("#treeDemo"), setting, zNodes);
@@ -66,9 +68,19 @@
                     <div id="topnav">
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
-                        <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
-                        欢迎您,管理员{$true_name}&nbsp;&nbsp;&nbsp;
-                        <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
+                        <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>                        
+                        <!-- end: skip link navigation -->
+                        <?php switch($user_right): case "0": ?>欢迎您,超级管理员&nbsp;<a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a><?php break;?>
+                            <?php case "1": ?>欢迎您,管理员<?php echo ($true_name); ?>&nbsp;<a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a><?php break;?>
+                            <?php case "2": ?>欢迎您,用户<?php echo ($true_name); ?>&nbsp;<?php break;?>
+                            <?php default: ?><div id="denglu" style="display: block;">
+                                <form name="checkin" action="__URL__/checkuser" method="POST">
+                                    用户名<input type="text" name="username"></input>
+                                    密码<input type="password" name="password"></input>
+                                    <input type="submit" value="登录"></input>
+                                </form>
+                            </div><?php endswitch;?>
+                        &nbsp;&nbsp; | <a href="#">使用帮助</a> | <a href="__APP__/index/index">系统首页</a>
                     </div>
                 </div>
                 <div id="nav">
@@ -77,8 +89,7 @@
                     <div class="hlist">
                         <!-- main navigation: horizontal list -->
                         <ul>
-                            <li class="active"><strong>添加文档</strong></li>
-                            <li><a href="__APP__/docfile/index">文档管理</a></li>
+                            <li class="active"><strong>文档详情</strong></li>                         
 
                         </ul>
                     </div>
@@ -86,50 +97,36 @@
                 <div id="teaser">
                 </div>
                 <div id="main">
-                    <div id="col1">
-                        <div id="col1_content" class="clearfix">
+
+                    <div id="col3">
+
+                        <div id="col3_content" class="clearfix">
                             <!-- add your content here -->
 
-                            <ul id="treeDemo" class="ztree"></ul>
+
+                            <table align="center">
+                                <?php if(is_array($docfile)): $i = 0; $__LIST__ = $docfile;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr><td>文档名:</td><td><?php echo ($vo["name"]); ?></td></tr>                                                                                    
+
+                                    <tr><td>文档描述：</td><td><?php echo ($vo["content"]); ?></td></tr>
+                                    <tr><td>下载地址（直接点击下载或者右键另存为）：</td><td><a href="__PUBLIC__/upload/<?php echo ($vo["filepath"]); ?>"><strong>点我下载</strong></a></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
+
+                            </table>
+
 
                         </div>
+                        <!-- IE Column Clearing -->
+                        <div id="ie_clearing"> &#160; </div>
                     </div>
-                    <div id="col3">
-                        <p id="tip_cata"><strong>当前所在目录:<strong>  {$currentCata}</p>
-                                    <div id="col3_content" class="clearfix">
-                                        <!-- add your content here -->
-                                        <form name="adduser" method="POST" action="__URL__/add"  enctype="multipart/form-data">
-                                            <p style="color: red">{$msg}</p>
-                                            <table align="center">
-                                                <tr><td>文件名:</td><td><input type="text" name="name" size="50" /></td></tr>
-                                                <tr><td>选择文件:</td><td><input type="file" name="docfile" /></td></tr>  
-                                                <tr><td>文件访问权限:</td>
-                                                    <td><select name="g_id">
-                                                            <option value="1">所有用户可见</option>
-                                                            <volist name="group_list" id="vo">
-                                                                <option value="{$vo.id}">{$vo.g_name}</option>
-                                                            </volist>
-                                                        </select></td></tr>
+                </div>
+                <!-- begin: #footer -->
+                <div id="footer">电子工程学院版权所有</a>
+                </div>
+            </div>
+            <div id="border-bottom">
+                <div id="edge-bl"></div>
+                <div id="edge-br"></div>
+            </div>
+        </div><embed></embed>
 
-                                                <tr><td>文件描述：</td><td><textarea rows="10" cols="45" name="content"></textarea></td></tr>
-                                                <tr><td></td><td><input type="submit" value="上传文件" /></td></tr>
-                                            </table>
-
-                                        </form>   
-                                    </div>
-                                    <!-- IE Column Clearing -->
-                                    <div id="ie_clearing"> &#160; </div>
-                                    </div>
-                                    </div>
-                                    <!-- begin: #footer -->
-                                    <div id="footer">电子工程学院版权所有</a>
-                                    </div>
-                                    </div>
-                                    <div id="border-bottom">
-                                        <div id="edge-bl"></div>
-                                        <div id="edge-br"></div>
-                                    </div>
-                                    </div><embed></embed>
-
-                                    </body>
-                                    </html>
+    </body>
+</html>

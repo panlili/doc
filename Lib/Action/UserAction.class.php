@@ -31,6 +31,11 @@ class UserAction extends BaseAction {
         if ($User->create()) {
             $data = $User->add();
             if (false !== $data) {
+                //添加用户时候默认属于id为1的组，该组为所有用户组。
+                $G_u=D("G_u");
+                $data1["g_id"]=1;
+                $data1["u_id"]=$data;
+                $G_u->add($data1);
                 session("action_message", "添加用户成功！");
                 $this->redirect("User/index");
             } else {
@@ -55,6 +60,8 @@ class UserAction extends BaseAction {
             $condition["id"] = $id;
             //$condition["right"] = array("neq", 9);
             if ($User->where($condition)->delete()) {
+                $G_u=D("G_u");
+                $G_u->where("u_id=".$id)->delete();//删除掉g_u表中冗余数据
                 $this->ajaxReturn($id, "deleted!", 1);
             } else {
                 $this->ajaxReturn(0, "something wrong!", 0);

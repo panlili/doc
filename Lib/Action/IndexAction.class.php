@@ -46,6 +46,19 @@ class IndexAction extends Action {
         $catatmp = $tmp->treeArray($catadata, 0);
         $catatmp = json_encode($catatmp);
         //dump($catatmp);
+        //获取当前登录用户所在的组
+        $G_u = D("G_u");
+        $g_list = $G_u->where("u_id=" . session("user_id"))->getField("g_id", true);
+        //dump($g_list);
+        foreach ($filelist as $key => $value) {
+            if (in_array($value["g_id"], $g_list)) {
+                $filelist[$key]["rightok"] = "1";
+            } else {
+                // $user_list[$key]["checked"]="";
+            }
+        }
+        //dump($filelist);
+
         $this->assign("filelist", $filelist);
         $this->assign("catadata", $catatmp);
         $this->display();
@@ -61,6 +74,17 @@ class IndexAction extends Action {
         if (is_null($filelist)) {
             $this->ajaxReturn("你所选择的目录下面没有文件", "调用不成功", 0);
         } else {
+            //获取当前登录用户所在的组
+            $G_u = D("G_u");
+            $g_list = $G_u->where("u_id=" . session("user_id"))->getField("g_id", true);
+            //dump($g_list);
+            foreach ($filelist as $key => $value) {
+                if (in_array($value["g_id"], $g_list)) {
+                    $filelist[$key]["rightok"] = "1";
+                } else {
+                    // $user_list[$key]["checked"]="";
+                }
+            }
             $this->assign("loginOk", session("loginOk"));
 
             $this->assign("filelist", $filelist);
@@ -84,7 +108,7 @@ class IndexAction extends Action {
             session("username", $result["username"]);
             session("truename", $result["truename"]);
             session("right", $result["right"]);
-            session("user_id",$result["id"]);
+            session("user_id", $result["id"]);
             session("loginOk", 1);
             //TODO: modify the first page to be enter
             $this->redirect("index/index");
@@ -98,13 +122,23 @@ class IndexAction extends Action {
         if (is_null(session("right"))) {
             $this->redirect("index/index");
         } else {
+            //获取当前登录用户所在的组
+            $G_u = D("G_u");
+            $g_list = $G_u->where("u_id=" . session("user_id"))->getField("g_id", true);
             $id = $this->_param(2);
+
             $Docfile = D("Docfile");
             $data = $Docfile->where("id=" . $id)->select();
-            $this->assign("docfile", $data);
-            $this->assign("true_name", session("truname"));
-            $this->assign("user_right", session("right"));
-            $this->display();
+            //dump($data);
+            if (in_array($data[0]["g_id"], $g_list)) {                
+                $this->assign("docfile", $data);
+                $this->assign("true_name", session("truname"));
+                $this->assign("user_right", session("right"));
+                $this->display();
+            } else {
+                // $user_list[$key]["checked"]="";
+                $this->redirect("index/index");
+            }
         }
     }
 
@@ -118,7 +152,7 @@ class IndexAction extends Action {
 
     public function search() {
         $search_key = $this->_post("search_key");
-         if (session("loginOk") == 0 || is_null(session("loginOk"))) {
+        if (session("loginOk") == 0 || is_null(session("loginOk"))) {
             //表示登录不成功
             $this->assign("loginOk", 0);
         } else {
@@ -134,8 +168,19 @@ class IndexAction extends Action {
         $condition['_logic'] = 'OR';
 
         $doc_list = $Docfile->where($condition)->select();
+        //获取当前登录用户所在的组
+        $G_u = D("G_u");
+        $g_list = $G_u->where("u_id=" . session("user_id"))->getField("g_id", true);
+        //dump($g_list);
+        foreach ($doc_list as $key => $value) {
+            if (in_array($value["g_id"], $g_list)) {
+                $doc_list[$key]["rightok"] = "1";
+            } else {
+                // $user_list[$key]["checked"]="";
+            }
+        }
         $this->assign("doc_list", $doc_list);
-       
+
 
 //        import('ORG.Util.Page'); // 导入分页类
 //        //$count = $Docfile->count();

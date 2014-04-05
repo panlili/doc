@@ -1,6 +1,4 @@
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -15,6 +13,7 @@
         <link rel="stylesheet" href="__PUBLIC__/css/ztree/zTreeStyle/zTreeStyle.css" type="text/css" />
         <script type="text/javascript" src="__PUBLIC__/js/ztree/jquery-1.4.4.min.js"></script>
         <script type="text/javascript" src="__PUBLIC__/js/ztree/jquery.ztree.core-3.5.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
         <!--  <script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
           <script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
         <SCRIPT type="text/javascript">
@@ -22,13 +21,11 @@
             //鼠标单击树节点时把加载文件列表
             function zTreeOnClick(event, treeId, treeNode) {
                 //alert(treeNode.tId + ", " + treeNode.name);
-                $.get("__APP__/docfile/SetCurrentCata", {cata_id: treeNode.id, cata_name: treeNode.name},
+                $.get("__APP__/docfile/filelist", {cata_id: treeNode.id},
                 function(json) {
                     //alert("Data Loaded: " +json.data);
-                    //$("#col3_content").empty();
-                    //$("#col3_content").append("<b>" + json.data + ","+treeNode.name+"</b>");
-                    $("#tip_cata").empty();
-                    $("#tip_cata").append("<strong>当前所在目录:<strong>" + " " + json.data);
+                    $("#col3_content").empty();
+                    $("#col3_content").append("<b>" + json.data + "</b>");
                 });
             }
             var setting = {
@@ -36,18 +33,12 @@
                     onClick: zTreeOnClick
                 }
             };
-            function goroot() {
-                $.get("__APP__/docfile/SetCurrentCata", {cata_id: 0},
-                function(json) {
-                    //alert(json.data);
-                    location.reload();
-                });
-            }
 
 
 
 
-            var zNodes = {$catadata};
+
+            var zNodes = <?php echo ($catadata); ?>;
 
             $(document).ready(function() {
                 $.fn.zTree.init($("#treeDemo"), setting, zNodes);
@@ -68,21 +59,9 @@
                     <div id="topnav">
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
-                        <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>                        
-                        <!-- end: skip link navigation -->
-                        <switch name="user_right">
-                            <case value="0">欢迎您,超级管理员&nbsp;<a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a></case>
-                            <case value="1">欢迎您,管理员{$true_name}&nbsp;<a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a></case>
-                            <case value="2">欢迎您,用户{$true_name}&nbsp;</case>
-                            <default /><div id="denglu" style="display: block;">
-                                <form name="checkin" action="__URL__/checkuser" method="POST">
-                                    用户名<input type="text" name="username"></input>
-                                    密码<input type="password" name="password"></input>
-                                    <input type="submit" value="登录"></input>
-                                </form>
-                            </div>
-                        </switch>
-                        &nbsp;&nbsp; | <a href="#">使用帮助</a> | <a href="__APP__/index/index">系统首页</a>
+                        <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
+                        欢迎您,管理员<?php echo ($true_name); ?>&nbsp;&nbsp;&nbsp;
+                        <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
                     </div>
                 </div>
                 <div id="nav">
@@ -91,7 +70,8 @@
                     <div class="hlist">
                         <!-- main navigation: horizontal list -->
                         <ul>
-                            <li class="active"><strong>文档详情</strong></li>                         
+                            <li class="active"><strong>文档管理</strong></li>
+                            <li><a href="__APP__/docfile/adddoc">添加文档</a></li>
 
                         </ul>
                     </div>
@@ -99,24 +79,25 @@
                 <div id="teaser">
                 </div>
                 <div id="main">
-
-                    <div id="col3">
-
-                        <div id="col3_content" class="clearfix">
+                    <div id="col1">
+                        <div id="col1_content" class="clearfix">
                             <!-- add your content here -->
 
+                            <ul id="treeDemo" class="ztree"></ul>
 
-                            <table align="center">
-                                <volist name="docfile" id="vo">
-                                    <tr><td>文档名:</td><td>{$vo.name}</td></tr>                                                                                    
-
-                                    <tr><td>文档描述：</td><td>{$vo.content}</td></tr>
-                                    <tr><td>下载地址（直接点击下载或者右键另存为）：</td><td><a href="__PUBLIC__/upload/{$vo.filepath}"><strong>点我下载</strong></a></td></tr>
-                                </volist>
+                        </div>
+                    </div>
+                    <div id="col3">
+                        <div id="col3_content" class="clearfix">
+                            <!-- add your content here -->
+                            <table class="common_table">
+                                <thead><th>序号</th><th>文件名</th><th>上传人</th><th>上传时间</th><th>编辑</th><th>删除</th></thead>
+                                <?php if(is_array($filelist)): $i = 0; $__LIST__ = $filelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr id="<?php echo ($vo["id"]); ?>"><td><?php echo ($vo["id"]); ?></td><td><?php echo ($vo["name"]); ?></td><td><?php echo ($vo["up_user"]); ?></td><td><?php echo ($vo["up_date"]); ?></td>
+                                        <td><a href="__URL__/edit/<?php echo ($vo["id"]); ?>">编辑</a></td>
+                                        <td><a href="javascript:delete_docfile(<?php echo ($vo["id"]); ?>)"><img src="__PUBLIC__/images/delete.png" /></a></td>
+                                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
                             </table>
-
-
                         </div>
                         <!-- IE Column Clearing -->
                         <div id="ie_clearing"> &#160; </div>

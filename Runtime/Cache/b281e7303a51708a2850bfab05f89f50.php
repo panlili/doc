@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -31,7 +31,7 @@
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
                         <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
-                        欢迎您,管理员{$true_name}&nbsp;&nbsp;&nbsp;
+                        欢迎您,管理员<?php echo ($true_name); ?>&nbsp;&nbsp;&nbsp;
                         <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
                     </div>
                 </div>
@@ -51,26 +51,22 @@
                 <div id="main">
                     <table class="common_table" align="center" ><thead><th>序号</th><th>用户名</th><th>用户权限</th><th>姓名</th><th>邮件地址</th><th>修改</th>
                             <th>删除</th></thead>
-                        <volist name="userlist" id="each">
-                            <tr id="{$each.id}">
-                                <td>{$each.id}</td>
-                                <td>{$each.username}</td>
+                        <?php if(is_array($userlist)): $i = 0; $__LIST__ = $userlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$each): $mod = ($i % 2 );++$i;?><tr id="<?php echo ($each["id"]); ?>">
+                                <td><?php echo ($each["id"]); ?></td>
+                                <td><?php echo ($each["username"]); ?></td>
                                 <td>
-                                    <switch name="each.right">
-                                        <case value="0">超级管理员</case>
-                                        <case value="1">管理员</case>
-                                        <case value="2">普通用户</case>
-                                    </switch>
+                                    <?php switch($each["right"]): case "0": ?>超级管理员<?php break;?>
+                                        <?php case "1": ?>管理员<?php break;?>
+                                        <?php case "2": ?>普通用户<?php break; endswitch;?>
                                 </td>
-                                <td>{$each.truename}</td>
+                                <td><?php echo ($each["truename"]); ?></td>
 
-                                <td>{$each.email}</td>
-                                <td><eq name="each.id" value="1"><else /><a href="__URL__/edit/{$each.id}">修改</a></eq></td>
-                                <td><eq name="each.id" value="1"><else /><a href="javascript:delete_user({$each.id})"><img src="__PUBLIC__/images/delete.png" /></a></eq></td>
-                            </tr>
-                        </volist>                         
+                                <td><?php echo ($each["email"]); ?></td>
+                                <td><?php if(($each["id"]) == "1"): else: ?><a href="__URL__/edit/<?php echo ($each["id"]); ?>">修改</a><?php endif; ?></td>
+                                <td><?php if(($each["id"]) == "1"): else: ?><a href="javascript:delete_user(<?php echo ($each["id"]); ?>)"><img src="__PUBLIC__/images/delete.png" /></a><?php endif; ?></td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>                         
                     </table>  
-                    <div style="width:100%; text-align:center;">{$page}</div>
+                    <div style="width:100%; text-align:center;"><?php echo ($page); ?></div>
                     <div id="nav">
                         <!-- skiplink anchor: navigation -->
                         <a id="navigation" name="navigation"></a>

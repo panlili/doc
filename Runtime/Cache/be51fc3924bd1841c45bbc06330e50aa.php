@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -45,7 +45,7 @@
 
 
 
-            var zNodes = {$catadata};
+            var zNodes = <?php echo ($catadata); ?>;
 
             $(document).ready(function() {
                 $.fn.zTree.init($("#treeDemo"), setting, zNodes);
@@ -67,7 +67,7 @@
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
                         <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
-                        欢迎您,管理员{$true_name}&nbsp;&nbsp;&nbsp;
+                        欢迎您,管理员<?php echo ($true_name); ?>&nbsp;&nbsp;&nbsp;
                         <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
                     </div>
                 </div>
@@ -95,20 +95,18 @@
                         </div>
                     </div>
                     <div id="col3">
-                        <p id="tip_cata"><strong>当前所在目录:<strong>  {$currentCata}</p>
+                        <p id="tip_cata"><strong>当前所在目录:<strong>  <?php echo ($currentCata); ?></p>
                                     <div id="col3_content" class="clearfix">
                                         <!-- add your content here -->
                                         <form name="adduser" method="POST" action="__URL__/add"  enctype="multipart/form-data">
-                                            <p style="color: red">{$msg}</p>
+                                            <p style="color: red"><?php echo ($msg); ?></p>
                                             <table align="center">
                                                 <tr><td>文件名:</td><td><input type="text" name="name" size="50" /></td></tr>
                                                 <tr><td>选择文件:</td><td><input type="file" name="docfile" /></td></tr>  
                                                 <tr><td>文件访问权限:</td>
                                                     <td><select name="g_id">
                                                             <option value="1">所有用户可见</option>
-                                                            <volist name="group_list" id="vo">
-                                                                <option value="{$vo.id}">{$vo.g_name}</option>
-                                                            </volist>
+                                                            <?php if(is_array($group_list)): $i = 0; $__LIST__ = $group_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["g_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                                                         </select></td></tr>
 
                                                 <tr><td>文件描述：</td><td><textarea rows="10" cols="45" name="content"></textarea></td></tr>

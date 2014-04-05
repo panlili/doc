@@ -41,12 +41,12 @@ class DocfileAction extends BaseAction {
         $filelist = $Docfile->order("up_date")->select();
         //dump($catadata);
         $tmp = new IndexAction();
-        $catatmp = $tmp->treeArray($catadata,0);
+        $catatmp = $tmp->treeArray($catadata, 0);
         $catatmp = json_encode($catatmp);
         //dump($catatmp);
         $this->assign("filelist", $filelist);
         $this->assign("catadata", $catatmp);
-        $this->assign("true_name",session("truname"));
+        $this->assign("true_name", session("truname"));
         $this->display();
     }
 
@@ -79,20 +79,20 @@ class DocfileAction extends BaseAction {
 
         $catadata = $Cata->order("id desc")->select();
         $Docfile = D("Docfile");
-        $filelist = $Docfile->order("up_date")->select();        
+        $filelist = $Docfile->order("up_date")->select();
         //dump($catadata);
         $tmp = new IndexAction();
-        $catatmp = $tmp->treeArray($catadata,0);
+        $catatmp = $tmp->treeArray($catadata, 0);
         $catatmp = json_encode($catatmp);
         //dump($catatmp);"
-        $Group=D("Group");
-        $group_list=$Group->select();
-        
+        $Group = D("Group");
+        $group_list = $Group->select();
+
         $this->assign("msg", $msg);
         $this->assign("filelist", $filelist);
         $this->assign("catadata", $catatmp);
-        $this->assign("true_name",session("truname"));
-        $this->assign("group_list",$group_list);
+        $this->assign("true_name", session("truname"));
+        $this->assign("group_list", $group_list);
         $this->display();
     }
 
@@ -136,9 +136,9 @@ class DocfileAction extends BaseAction {
             } else {
                 $Docfile->cata_id = session("currentCataId");
             }
-            $Docfile->up_user_id=session("user_id");
-             $Docfile->up_user_name=session("truename");
-             $Docfile->up_date=date("Y-m-d");
+            $Docfile->up_user_id = session("user_id");
+            $Docfile->up_user_name = session("truename");
+            $Docfile->up_date = date("Y-m-d");
             $data = $Docfile->add();
             if (false !== $data) {
                 session("action_message", "添加文档成功！可以添加下一个文档。");
@@ -161,8 +161,13 @@ class DocfileAction extends BaseAction {
             $this->redirect("docfile/index");
         } else {
             $condition["id"] = $id;
+            $filepath = $Docfile->where("id=" . $id)->getField("filepath");
+            $filepath = "./Public/Upload/" . $filepath;
             //$condition["right"] = array("neq", 9);
             if ($Docfile->where($condition)->delete()) {
+                if (file_exists($filepath)) {
+                    unlink($filepath); //删除文件
+                }
                 $this->ajaxReturn($id, "deleted!", 1);
             } else {
                 $this->ajaxReturn(0, "something wrong!", 0);
@@ -171,11 +176,28 @@ class DocfileAction extends BaseAction {
     }
 
     public function edit() {
+
         $id = $this->_param(2);
-        $Docfile=D("Docfile");
-        $data=$Docfile->where("id=".$id)->select();
-        $this->assign("docfile",$data);
-        $this->assign("true_name",session("truname"));
+        $Cata = D('Cata');
+        $catadata = $Cata->order("id desc")->select();
+        $tmp = new IndexAction();
+        $catatmp = $tmp->treeArray($catadata, 0);
+        $catatmp = json_encode($catatmp);
+        $this->assign("catadata", $catatmp);
+
+        $Docfile = D("Docfile");
+        $data = $Docfile->where("id=" . $id)->select();
+        session("currentCataId", $data[0]["cata_id"]);
+        $cataname = $Cata->where("id=" . $data[0]["cata_id"])->getfield("name");
+        session("currentCataName", $cataname);
+
+        $Group = D("Group");
+        $group_list = $Group->select();
+
+        $this->assign("currentCata", session("currentCataName"));
+        $this->assign("group_list", $group_list);
+        $this->assign("docfile", $data);
+        $this->assign("true_name", session("truname"));
         $this->display();
     }
 
@@ -183,7 +205,7 @@ class DocfileAction extends BaseAction {
         $id = $this->_post("id");
         $Docfile = D("Docfile");
         if ($newdata = $Docfile->create()) {
-            
+            $newdata["cata_id"] = session("currentCataId");
             $data = $Docfile->save($newdata);
             if (false !== $data) {
                 $this->redirect('docfile/index');

@@ -1,6 +1,8 @@
 <?php
 return array(
 	//'配置项'=>'配置值'
+    'TAG_NESTED_LEVEL' =>5,
+    
      /* 数据库设置 */
     'DB_TYPE'               => 'mysql',     // 数据库类型
     'DB_HOST'               => 'localhost', // 服务器地址
@@ -13,11 +15,11 @@ return array(
      /* 错误设置 */
     'ERROR_MESSAGE'         => '页面错误！请稍后再试～',//错误显示信息,非调试模式有效
     'ERROR_PAGE'            => '',	// 错误定向页面
-    'SHOW_ERROR_MSG'        => true,    // 显示错误信息
+    'SHOW_ERROR_MSG'        => false,    // 显示错误信息
     'TRACE_EXCEPTION'       => false,   // TRACE错误信息是否抛异常 针对trace方法 
 
     /* 日志设置 */
-    'LOG_RECORD'            => true,   // 默认不记录日志
+    'LOG_RECORD'            => false,   // 默认不记录日志
     'LOG_TYPE'              => 3, // 日志记录类型 0 系统 1 邮件 3 文件 4 SAPI 默认为文件方式
     'LOG_DEST'              => '', // 日志记录目标
     'LOG_EXTRA'             => '', // 日志记录额外信息

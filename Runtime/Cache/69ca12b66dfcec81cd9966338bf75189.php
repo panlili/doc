@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -31,7 +31,7 @@
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
                         <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
-                        欢迎您,管理员{$true_name}&nbsp;&nbsp;&nbsp;
+                        欢迎您,管理员<?php echo ($true_name); ?>&nbsp;&nbsp;&nbsp;
                         <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
                     </div>
                 </div>
@@ -51,20 +51,18 @@
                 <div id="main">
                     <table class="common_table" align="center" ><thead><th>序号</th><th>用户组</th><th>备注</th><th>组失效时间</th><th>修改</th>
                             <th>删除</th></thead>
-                        <volist name="grouplist" id="each">
-                            <tr id="{$each.id}">
-                                <td>{$each.id}</td>
-                                <td>{$each.g_name}</td>
+                        <?php if(is_array($grouplist)): $i = 0; $__LIST__ = $grouplist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$each): $mod = ($i % 2 );++$i;?><tr id="<?php echo ($each["id"]); ?>">
+                                <td><?php echo ($each["id"]); ?></td>
+                                <td><?php echo ($each["g_name"]); ?></td>
                                 <td>
-                                    {$each.content}
+                                    <?php echo ($each["content"]); ?>
                                 </td>
-                                <td>{$each.fail_date}</td>                                
-                                <td><eq name="each.id" value="1"><else /><a href="__URL__/edit/{$each.id}">修改</a></eq></td>
-                                <td><eq name="each.id" value="1"><else /><a href="javascript:delete_user({$each.id})"><img src="__PUBLIC__/images/delete.png" /></a></eq></td>
-                            </tr>
-                        </volist>                         
+                                <td><?php echo ($each["fail_date"]); ?></td>                                
+                                <td><?php if(($each["id"]) == "1"): else: ?><a href="__URL__/edit/<?php echo ($each["id"]); ?>">修改</a><?php endif; ?></td>
+                                <td><?php if(($each["id"]) == "1"): else: ?><a href="javascript:delete_user(<?php echo ($each["id"]); ?>)"><img src="__PUBLIC__/images/delete.png" /></a><?php endif; ?></td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>                         
                     </table>  
-                    <div style="width:100%; text-align:center;">{$page}</div>                   
+                    <div style="width:100%; text-align:center;"><?php echo ($page); ?></div>                   
                       
                 </div>
                 <!-- begin: #footer -->
