@@ -45,7 +45,7 @@ class UserAction extends BaseAction {
 
     public function delete() {
         $id = $this->_post("id");
-        dump($id);
+        //dump($id);
         //$id=3;
         $User = D("User");
         if (!isset($id)) {

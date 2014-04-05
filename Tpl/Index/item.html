@@ -68,12 +68,11 @@
                     <div id="topnav">
                         <!-- start: skip link navigation -->
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
-                        <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
-                        欢迎您,管理员{$true_name}&nbsp;&nbsp;&nbsp;
+                        <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>                        
                         <!-- end: skip link navigation -->
                         <switch name="user_right">
-                            <case value="0">欢迎您,超级管理员&nbsp;<a href="__APP__/user/index">用户管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/Cata/index">分类目录管理</a></case>
-                            <case value="1">欢迎您,管理员{$true_name}&nbsp;<a href="__APP__/user/index">用户管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/Cata/index">分类目录管理</a></case>
+                            <case value="0">欢迎您,超级管理员&nbsp;<a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a></case>
+                            <case value="1">欢迎您,管理员{$true_name}&nbsp;<a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a></case>
                             <case value="2">欢迎您,用户{$true_name}&nbsp;</case>
                             <default /><div id="denglu" style="display: block;">
                                 <form name="checkin" action="__URL__/checkuser" method="POST">

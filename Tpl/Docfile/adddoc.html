@@ -68,7 +68,7 @@
                         <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
                         <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
                         欢迎您,管理员{$true_name}&nbsp;&nbsp;&nbsp;
-                        <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="#">文件管理</a> | <a href="__APP__/Cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
+                        <!-- end: skip link navigation --><a href="__APP__/user/index">用户管理</a> | <a href="__APP__/group/index">组管理</a> | <a href="__APP__/docfile/index">文件管理</a> | <a href="__APP__/cata/index">分类目录管理</a> | <a href="__APP__">系统首页</a>
                     </div>
                 </div>
                 <div id="nav">
@@ -102,7 +102,14 @@
                                             <p style="color: red">{$msg}</p>
                                             <table align="center">
                                                 <tr><td>文件名:</td><td><input type="text" name="name" size="50" /></td></tr>
-                                                <tr><td>选择文件:</td><td><input type="file" name="docfile" /></td></tr>                                              
+                                                <tr><td>选择文件:</td><td><input type="file" name="docfile" /></td></tr>  
+                                                <tr><td>文件访问权限:</td>
+                                                    <td><select name="g_id">
+                                                            <option value="0">所有用户可见</option>
+                                                            <volist name="group_list" id="vo">
+                                                                <option value="{$vo.id}">{$vo.g_name}</option>
+                                                            </volist>
+                                                        </select></td></tr>
 
                                                 <tr><td>文件描述：</td><td><textarea rows="10" cols="45" name="content"></textarea></td></tr>
                                                 <tr><td></td><td><input type="submit" value="上传文件" /></td></tr>

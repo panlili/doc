@@ -11,12 +11,26 @@
         <![endif]-->
 
         <link rel="stylesheet" href="__PUBLIC__/css/ztree/zTreeStyle/zTreeStyle.css" type="text/css" />
+        <link href="__PUBLIC__/css/jquery.ui/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+        <link href="__PUBLIC__/css/jquery.ui/jquery.ui.all.css" rel="stylesheet" type="text/css" />
         <!--<script type="text/javascript" src="__PUBLIC__/js/ztree/jquery-1.4.4.min.js"></script>-->
         <script type="text/javascript" src="__PUBLIC__/js/jquery172.js"></script>
         <script type="text/javascript" src="__PUBLIC__/js/ztree/jquery.ztree.core-3.5.js"></script>
         <script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/jquery.ui/jquery-ui.custom.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/jquery.ui/jquery.ui.core.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/jquery.ui/jquery.ui.datepicker-zh-CN.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/jquery.ui/jquery.ui.datepicker.min.js"></script>
         <!--  <script type="text/javascript" src="../../../js/jquery.ztree.excheck-3.5.js"></script>
           <script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>-->
+        <script>
+	$(function() {
+		$( "#datepicker" ).datepicker({
+			changeMonth: true,
+			changeYear: true
+		});
+	});
+	</script>
 
     </head>
     <body>
@@ -51,11 +65,12 @@
                 <div id="main">
                     <form action="__URL__/add" method="POST">
                         <p>用户组名：<input name="g_name" type="text" size="50"></input></p>
-                        <p>失效日期：<input name="fail_date" type="text" size="50"></input></p>
+                        <p>失效日期：<input name="fail_date" type="text" size="50" id="datepicker"></input></p>
+                        <p>组的描述：</p><textarea style="margin-left: 55px;" name="g_content"  rows="10" cols="40"></textarea>
                         <p>选择组的成员：</p>
                         <div style="border: 1px solid;padding: 15px;margin: 15px;">
                             <volist name="user_list" id="vo">
-                                <input type="checkbox" name="members[]" value="">{$vo.truename} &nbsp;&nbsp;&nbsp;&nbsp;</input>
+                                <input type="checkbox" name="members[]" value="{$vo.id}">{$vo.truename} &nbsp;&nbsp;&nbsp;&nbsp;</input>
                                 
                             </volist>
                         </div> 

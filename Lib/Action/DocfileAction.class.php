@@ -79,16 +79,20 @@ class DocfileAction extends BaseAction {
 
         $catadata = $Cata->order("id desc")->select();
         $Docfile = D("Docfile");
-        $filelist = $Docfile->order("up_date")->select();
+        $filelist = $Docfile->order("up_date")->select();        
         //dump($catadata);
         $tmp = new IndexAction();
         $catatmp = $tmp->treeArray($catadata,0);
         $catatmp = json_encode($catatmp);
         //dump($catatmp);"
+        $Group=D("Group");
+        $group_list=$Group->select();
+        
         $this->assign("msg", $msg);
         $this->assign("filelist", $filelist);
         $this->assign("catadata", $catatmp);
         $this->assign("true_name",session("truname"));
+        $this->assign("group_list",$group_list);
         $this->display();
     }
 
@@ -132,7 +136,9 @@ class DocfileAction extends BaseAction {
             } else {
                 $Docfile->cata_id = session("currentCataId");
             }
-
+            $Docfile->up_user_id=session("user_id");
+             $Docfile->up_user_name=session("truename");
+             $Docfile->up_date=date("Y-m-d");
             $data = $Docfile->add();
             if (false !== $data) {
                 session("action_message", "添加文档成功！可以添加下一个文档。");

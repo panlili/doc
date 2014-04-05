@@ -40,7 +40,7 @@ class IndexAction extends Action {
         $Cata = D('Cata');
         $catadata = $Cata->order("id desc")->select();
         $Docfile = D("Docfile");
-        $filelist = $Docfile->order("up_date")->select();
+        $filelist = $Docfile->order("id desc")->select();
         //dump($catadata);
         $tmp = new IndexAction();
         $catatmp = $tmp->treeArray($catadata, 0);
@@ -84,6 +84,7 @@ class IndexAction extends Action {
             session("username", $result["username"]);
             session("truename", $result["truename"]);
             session("right", $result["right"]);
+            session("user_id",$result["id"]);
             session("loginOk", 1);
             //TODO: modify the first page to be enter
             $this->redirect("index/index");
@@ -117,6 +118,15 @@ class IndexAction extends Action {
 
     public function search() {
         $search_key = $this->_post("search_key");
+         if (session("loginOk") == 0 || is_null(session("loginOk"))) {
+            //表示登录不成功
+            $this->assign("loginOk", 0);
+        } else {
+            //登录成功
+            $this->assign("loginOk", 1);
+            $this->assign("true_name", session("truname"));
+            $this->assign("user_right", session("right"));
+        }
         $Docfile = D("Docfile");
 
         $condition["name"] = array("like", "%" . $search_key . "%");
@@ -125,6 +135,7 @@ class IndexAction extends Action {
 
         $doc_list = $Docfile->where($condition)->select();
         $this->assign("doc_list", $doc_list);
+       
 
 //        import('ORG.Util.Page'); // 导入分页类
 //        //$count = $Docfile->count();
