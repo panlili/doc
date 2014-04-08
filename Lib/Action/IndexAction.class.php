@@ -45,14 +45,20 @@ class IndexAction extends Action {
         $tmp = new IndexAction();
         $catatmp = $tmp->treeArray($catadata, 0);
         $catatmp = json_encode($catatmp);
-        //dump($catatmp);
+        //dump(session("u_group"));
         //获取当前登录用户所在的组
         $G_u = D("G_u");
         $g_list = $G_u->where("u_id=" . session("user_id"))->getField("g_id", true);
+        $Group = D("Group");
         //dump($g_list);
         foreach ($filelist as $key => $value) {
             if (in_array($value["g_id"], $g_list)) {
-                $filelist[$key]["rightok"] = "1";
+                $data = $Group->where("id=" . $value["g_id"])->find();
+                if ($data["fail_date"] >= date('Y-m-d')) {
+                    $filelist[$key]["rightok"] = "1";
+                } else {
+                    $filelist[$key]["rightok"] = "2";
+                }
             } else {
                 // $user_list[$key]["checked"]="";
             }
@@ -77,10 +83,16 @@ class IndexAction extends Action {
             //获取当前登录用户所在的组
             $G_u = D("G_u");
             $g_list = $G_u->where("u_id=" . session("user_id"))->getField("g_id", true);
+            $Group = D("Group");
             //dump($g_list);
             foreach ($filelist as $key => $value) {
                 if (in_array($value["g_id"], $g_list)) {
-                    $filelist[$key]["rightok"] = "1";
+                    $data = $Group->where("id=" . $value["g_id"])->find();
+                    if ($data["fail_date"] >= date('Y-m-d')) {
+                        $filelist[$key]["rightok"] = "1";
+                    } else {
+                        $filelist[$key]["rightok"] = "2";
+                    }
                 } else {
                     // $user_list[$key]["checked"]="";
                 }
@@ -95,7 +107,7 @@ class IndexAction extends Action {
 
     public function checkUser() {
 
-        //其次对用户验证, 最开始使用的数据库是config.php中定义的sjf_为前缀的user库
+        //对用户验证
         $User = D('User');
         $username = $this->_post("username");
         $password = $this->_post("password");
@@ -105,6 +117,10 @@ class IndexAction extends Action {
         $condition["_logic"] = "AND";
         $result = $User->where($condition)->find();
         if ($result) {
+            //if($result[""])
+            $G_u = D("G_u");
+            $U_group = $G_u->where("u_id=" . $result["id"])->getField("g_id", true);
+            session("u_group", $U_group);
             session("username", $result["username"]);
             session("truename", $result["truename"]);
             session("right", $result["right"]);
@@ -130,7 +146,7 @@ class IndexAction extends Action {
             $Docfile = D("Docfile");
             $data = $Docfile->where("id=" . $id)->select();
             //dump($data);
-            if (in_array($data[0]["g_id"], $g_list)) {                
+            if (in_array($data[0]["g_id"], $g_list)) {
                 $this->assign("docfile", $data);
                 $this->assign("true_name", session("truename"));
                 $this->assign("user_right", session("right"));
@@ -171,10 +187,16 @@ class IndexAction extends Action {
         //获取当前登录用户所在的组
         $G_u = D("G_u");
         $g_list = $G_u->where("u_id=" . session("user_id"))->getField("g_id", true);
+        $Group = D("Group");
         //dump($g_list);
         foreach ($doc_list as $key => $value) {
             if (in_array($value["g_id"], $g_list)) {
-                $doc_list[$key]["rightok"] = "1";
+                $data = $Group->where("id=" . $value["g_id"])->find();
+                if ($data["fail_date"] >= date('Y-m-d')) {
+                    $doc_list[$key]["rightok"] = "1";
+                } else {
+                    $doc_list[$key]["rightok"] = "2";
+                }
             } else {
                 // $user_list[$key]["checked"]="";
             }
