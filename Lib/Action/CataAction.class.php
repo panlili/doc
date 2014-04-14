@@ -65,7 +65,7 @@ class CataAction extends BaseAction {
         } else {
             session("currentCataId", $this->_param("cata_id"));
             session("currentCataName", $this->_param("cata_name"));
-            $str = session("currentCataName") . "<button type=\"button\" onclick=\"goroot()\">回到根目录</button>";
+            $str = session("currentCataName") . "<input type=\"button\" onclick=\"goroot()\" value=\"回到根目录\" />";
             $this->ajaxReturn($str, "调用成功！", 1);
         }
 //        

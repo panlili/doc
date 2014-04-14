@@ -24,8 +24,9 @@
                     //alert("Data Loaded: " +json.data);
                     //$("#col3_content").empty();
                     //$("#col3_content").append("<b>" + json.data + ","+treeNode.name+"</b>");
-                    $("#tip_cata").empty();
-                    $("#tip_cata").append("<strong>当前所在目录:<strong>" + " " + json.data);
+                    //$("#tip_cata").empty();
+                    $("#tip_cata").html("<strong>当前所在目录:<strong>" + " " + json.data);
+                    //$("#op_table").html("baby");
                 });
             }
             var setting = {
@@ -94,11 +95,12 @@
                         </div>
                     </div>
                     <div id="col3">
-                        <div id="col3_content" class="clearfix">
+
+                        <div id="col3_content" >
                             <!-- add your content here -->
-                            <p id="tip_cata"><strong>当前所在目录:<strong>  {$currentCata}</p>
+                            <div id="tip_cata"><strong>当前所在目录:<strong>  {$currentCata}</div>
                                         <p style="color: red">{$msg}</p>
-                                        <table class="common_table">
+                                        <table id="op_table" class="common_table">
                                             <tr>
                                                 <td>
 
@@ -112,7 +114,7 @@
 
                                                 </td>
                                                 <td>
-                                                    
+
                                                     <form name="editcata" method="post" action="__URL__/edit">
 
                                                         <p>目录名 <input type="text" name="name" value="{$cataName}" /></p>
@@ -121,8 +123,7 @@
 
                                                     </form>
                                                 </td>
-                                                <td>
-                                                    <button></button>
+                                                <td>                                                    
                                                     <form name="delcata" method="post" action="__URL__/delete">                                                       
 
                                                         <input type="submit" value="删除当前目录" />
