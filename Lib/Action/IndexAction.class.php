@@ -217,4 +217,29 @@ class IndexAction extends Action {
         $this->display();
     }
 
+    public function changepwd() {
+        $this->assign("true_name", session("truename"));
+        $this->assign("user_right", session("right"));
+        $this->assign("user_id", session("user_id"));
+        $this->display();
+    }
+
+    public function pwd() {
+        $User = D("User");
+        $id=  $this->_post("id");
+        $pwd1 = $this->_post("password1");
+        $pwd2 = $this->_post("password2");
+        if ($pwd1 == $pwd2) {
+            $data['password'] =$pwd1;
+            $User->where("id=".$id)->save($data);
+            $this->logout();
+        } else {
+            $this->assign("true_name", session("truename"));
+            $this->assign("user_right", session("right"));
+            $this->assign("user_id", session("user_id"));
+            $this->assign("msg", "两次输入的密码不一致，请重新输入");
+            $this->display("changepwd");
+        }
+    }
+
 }
