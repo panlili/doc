@@ -70,10 +70,13 @@
                         <p>组的描述：</p><textarea style="margin-left: 55px;" name="g_content"  rows="10" cols="40">{$content}</textarea>
                         <p>选择组的成员：</p>
                         <div style="border: 1px solid;padding: 15px;margin: 15px;">
+                            <ul>
                             <volist name="user_list" id="vo">
-                                <input type="checkbox" name="members[]" value="{$vo.id}" <present name="vo.checked">checked=""</present>>{$vo.truename} &nbsp;&nbsp;&nbsp;&nbsp;</input>
-                                
+                                <li class="user_list"> <input type="checkbox" name="members[]" value="{$vo.id}" <present name="vo.checked">checked=""</present>>{$vo.truename} &nbsp;&nbsp;&nbsp;&nbsp;</input>
+                                </li>
+                                <div style="clear:both"></div>
                             </volist>
+                            </ul>
                         </div> 
                         <input type="submit" value="提交修改"></input>
                         <input type="reset" value="重置"></input>
