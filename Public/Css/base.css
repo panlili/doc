@@ -224,5 +224,12 @@
     left: 0;
     top:0;
   }
+  .user_list{
+      float:left;
+      margin: 5px;
+      height: 15px;
+      width: 100px;
+      list-style: none;
+  }
 }
 
